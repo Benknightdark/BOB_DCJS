@@ -1,0 +1,574 @@
+﻿@{
+
+    Layout = "~/Views/_template.cshtml";
+}
+@model IEnumerable<Demo0805.Models.BOBOrderList.OrderList>
+@*<a href="/Bookstores/Create" class="btn btn-primary btn-lg active glyphicon glyphicon-plus-sign" role="button"></a>*@
+
+<style>
+    .dc-chart .grid-line line {
+        fill: none;
+        stroke: #000000;
+        opacity: 10;
+        shape-rendering: crispEdges;
+    }
+</style>
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">書籍存貨表</a></li>
+    <li><a data-toggle="tab" href="#menu1">篩選查詢</a></li>
+    <li><a data-toggle="tab" href="#menu2">新增存貨</a></li>
+    <li><a data-toggle="tab" href="#menu3">資料視覺化</a></li>
+</ul>
+
+<div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+        <div class="form-group">
+            <div class="table">
+                <table class="table table-bordered table-hover">
+                    <tr class="success">
+                        <th> @Html.DisplayNameFor(model => model.name) </th>
+                        <th> @Html.DisplayNameFor(model => model.bookname) </th>
+                        <th> @Html.DisplayNameFor(model => model.quantity) </th>
+                        <th>修改功能</th>
+                        <th>刪除功能</th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>   @Html.DisplayFor(modelItem => item.name)   </td>
+                            <td>   @Html.DisplayFor(modelItem => item.bookname)   </td>
+                            <td>   @Html.DisplayFor(modelItem => item.quantity)   </td>
+                            <td>  @Html.ActionLink("修改", "Edit", new { no = item.no, id = item.id }, new { @class = "btn btn-primary glyphicon glyphicon-th-list" })</td>
+                            <td>  @Html.ActionLink("刪除", "Delete", new { no = item.no, id = item.id }, new { @class = "btn btn-danger glyphicon glyphicon-remove-sign" })</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+        <div class="input-group">
+            @*foreach (var item in ViewBag.BookStoresList)
+                {
+                    <input type="radio" SelectedSources value="@item.Value" >@item.Text
+                }*@
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    書店篩選查詢
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+                    @foreach (var a in @ViewBag.BookStoresList)
+                    {
+                        <li><a href="@Url.Action("BookStoreSelected", "Orders")?no=@a.Value">@a.Text</a></li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="input-group">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    書籍篩選查詢
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+                    @foreach (var a in @ViewBag.BooksList)
+                    {
+                        <li><a href="@Url.Action("BookSelected", "Orders")/@a.Value">@a.Text</a></li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+        <div class="input-group">
+            @using (Html.BeginForm("Create", "Orders", FormMethod.Post))
+            {
+                @Html.DropDownList("BookStoresList", new SelectList(ViewBag.BookStoresList, "Value", "Text"))
+                @Html.DropDownList("BooksList", new SelectList(ViewBag.BooksList, "Value", "Text"))
+                <input id="Text1" type="number" name="quantity" placeholder="請輸入書籍數量" />
+                <input id="Submit1" type="submit" value="新增書籍存貨資料" />
+            }
+        </div>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+        <form class="form-inline">
+            <h3><span class="label label-info">圖表還原選項</span></h3>
+            <div class="btn-group" role="group">
+                <button type="button" id="restall" class="btn btn-default">全部圖表</button>
+                <button type="button" id="resetBookStoreBarChart" class="btn btn-default">書局維度長條圖</button>
+                <button type="button" id="resetBookBarChart" class="btn btn-default">書籍維度長條圖</button>
+                <button type="button" id="resetPublisherBarChart" class="btn btn-default">出版社維度長條圖</button>
+                <button type="button" id="retrieve" class="btn btn-default">重新擷取資料</button>
+            </div>
+        </form>
+        <div id="BookStoreBarChart">
+            <h3><span class="label label-success">書局總存貨維度</span></h3>
+        </div>
+        <div id="BookBarChart">
+            <h3><span class="label label-success">書籍總存貨維度</span></h3>
+        </div>
+        <div id="QuantityBarChart">
+            <h3><span class="label label-success">總存貨維度</span></h3>
+        </div>
+        <div id="PublisherBarChart">
+            <h3><span class="label label-success">出版社總存貨維度</span></h3>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#total">總表</a></li>
+                    <li><a data-toggle="tab" href="#bookstore">書局維度表</a></li>
+                    <li><a data-toggle="tab" href="#book">書籍維度表</a></li>
+                    <li><a data-toggle="tab" href="#publisher">出版社維度表</a></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div id="total" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <table class="table table-bordered table-striped" id="data-table3">
+                                <thead>
+                                    <tr class="header">
+                                        <th> @Html.DisplayNameFor(model => model.publisher) </th>
+                                        <th> @Html.DisplayNameFor(model => model.name) </th>
+                                        <th> @Html.DisplayNameFor(model => model.bookname) </th>
+                                        <th> @Html.DisplayNameFor(model => model.quantity) </th>
+                                        <th>修改功能</th>
+                                        <th>刪除功能</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="bookstore" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <table class="table table-bordered table-striped" id="data-table">
+                                <thead>
+                                    <tr class="header">
+                                        <th> @Html.DisplayNameFor(model => model.publisher) </th>
+                                        <th> @Html.DisplayNameFor(model => model.bookname) </th>
+                                        <th> @Html.DisplayNameFor(model => model.quantity) </th>
+                                        <th>修改功能</th>
+                                        <th>刪除功能</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="book" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <table class="table table-bordered table-striped" id="data-table2">
+                                <thead>
+                                    <tr class="header">
+                                        <th> @Html.DisplayNameFor(model => model.publisher) </th>
+                                        <th> @Html.DisplayNameFor(model => model.name) </th>
+                                        <th> @Html.DisplayNameFor(model => model.quantity) </th>
+                                        <th>修改功能</th>
+                                        <th>刪除功能</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="publisher" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <table class="table table-bordered table-striped" id="data-table4">
+                                <thead>
+                                    <tr class="header">
+                                        <th> @Html.DisplayNameFor(model => model.name) </th>
+                                        <th> @Html.DisplayNameFor(model => model.bookname) </th>
+                                        <th> @Html.DisplayNameFor(model => model.quantity) </th>
+                                        <th>修改功能</th>
+                                        <th>刪除功能</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--ajax test-->
+<script>
+
+
+    //運用AJAX呼叫資料
+    var submit = function () {
+        $.ajax({
+            url: "/d3js/Orders",//呼叫資料的action
+            type: 'POST',
+            contentType: "application/json; charset=utf-8",
+            datatype: 'json',
+            error: function (xhr) {
+                console.log('Error: ' + xhr.statusText);
+            },
+            success: function (dataset) {
+                LoadData(dataset);//呼叫輸出圖表function
+                ResetOption();//呼叫還原圖表function
+            }
+        });
+    };
+
+    onload = submit;
+    d3.selectAll("#retrieve").on("click", function (d) { submit.call() });//重新擷取資料function
+    //輸出圖表function
+    function LoadData(dataset) {
+        //將AJAX所回傳的資料轉為crossfilter可接受的資料
+        var data = crossfilter(dataset);
+
+        ///////////////////////定義呈現資料的維度//////////////////////////////////
+        //書局維度
+        var Bookstore = data.dimension(function (d) { return d.name; });
+
+        //書籍維度
+        var Book = data.dimension(function (d) { return d.bookname; });
+
+        //書局維度的存貨數量
+        var QuantityByBookstore = Bookstore.group().reduceSum(function (d) {
+            return d.quantity;
+        });
+        //書籍維度的存貨數量
+        var QuantityByBook = Book.group().reduceSum(function (d) {
+            return d.quantity;
+        });
+        //出版社維度的存貨數量
+        var Publisher = data.dimension(function (d) { return d.publisher; });
+        var QuantityByPublisher = Publisher.group().reduceSum(function (d) {
+            return d.quantity;
+        });
+        //所有維度
+        var AllDim = data.dimension(function (d) { return d; });
+        var AllDimGroup = AllDim.group();
+        //書局存貨維度
+        var Quantity = data.dimension(function (d) { return d.quantity; });
+        var QuantityGroup = Quantity.group().reduceCount();
+        /////////////////////////////////////////////////////////////////
+     
+        /////////////////////////////////////////////////////////////////
+        //書局維度的序數尺度範圍
+        var BookStoreDomain = [];
+        for (var a in dataset) {
+            BookStoreDomain.push(dataset[a].name);//將書局名稱加入BookStoreDomain陣列
+        };
+        //書籍維度的序數尺度範圍
+        var BookDomain = [];
+        for (var a in dataset) {
+            BookDomain.push(dataset[a].bookname);//將書籍名稱加入BookDomain陣列
+        };
+        //出版社維度的序數尺度範圍
+        var PublisherDomain = [];
+        for (var a in dataset) {
+            PublisherDomain.push(dataset[a].publisher);//將書籍名稱加入BookDomain陣列
+        };
+        ////////////////////////////////////////////////////////////////////////////////////////////////
+
+        /////////////////////////////////////////書籍維度長條圖///////////////////////////////////
+        //建立全域變數BookBarChart儲存書籍維度長條圖的SVG
+        window.BookBarChart = dc.barChart("#BookBarChart");
+        //增加書籍維度長條圖SVG的屬性
+        window.BookBarChart
+         .width(400)//SVG寬度
+        .height(250)//SVG高度
+        .transitionDuration(500)//過場轉移動作，每次時以0.5秒延遲輸出
+        .margins({ top: 10, right: 50, bottom: 30, left: 40 })//加入margins的CSS
+        .dimension(Book)//加入書籍的維度資料
+        .group(QuantityByBook)//加入書籍維度的存貨數量
+        .x(d3.scale.ordinal().domain(BookDomain))//x軸是以序數尺度呈現，其domain會呼叫BookDomain所回傳的書籍名稱陣列
+       .xUnits(dc.units.ordinal)//輸出x軸domain裡的書籍名稱
+        .y(d3.scale.linear().domain([d3.min(dataset, function (d) { return d.quantity; }) - 10, d3.max(dataset, function (d) { return d.quantity; }) + 200]))//y軸是以線性尺度呈現，其範圍為0~900
+        .centerBar(true)//輸出的長條圖設為置中
+        .colors(d3.scale.category20b())
+        .colors(["#a60000", "#ff0000", "#ff4040", "#ff7373", "#67e667", "#39e639", "#00cc00"])
+        .renderHorizontalGridLines(true)//輸出圖表的GridLine
+        .title(function (d) { return " \書籍數量: " + d.data.value; })//當移動到長條圖時，會以前綴資訊秀出書籍數量
+        .renderlet(
+                //呈現bar chart 標籤文字
+                function (Label) {
+                    var barsData = [];
+                    var bars = Label.selectAll('.bar').each(function (d) { barsData.push(d); });
+
+                    //Remove old values (if found)
+                    d3.select(bars[0][0].parentNode).select('#inline-labels').remove();
+                    //Create group for labels
+                    var gLabels = d3.select(bars[0][0].parentNode).append('g').attr('id', 'inline-labels');
+
+                    for (var i = bars[0].length - 1; i >= 0; i--) {
+
+                        var b = bars[0][i];
+                        //Only create label if bar height is tall enough
+                        if (+b.getAttribute('height') < 18) continue;
+                        gLabels
+                            .append("text")
+                            .text(barsData[i].data.value)
+                            .attr('x', +b.getAttribute('x') + (b.getAttribute('width') / 2))
+                            .attr('y', +b.getAttribute('y') + 15)
+                            .attr('text-anchor', 'middle')
+                            .attr('fill', 'white');
+                    }
+
+                }
+            )
+        .renderlet(
+          //當點擊長條圖時，會以彈跳視窗秀出書局所擁有的書籍數量
+        function (bar) {
+            bar.selectAll(".dc-chart rect.bar")
+                     .on("mouseover", function (d) {
+                         console.log(d.data.key + "的書籍總數量為" + d.data.value + "本");
+
+                     })
+        }
+
+        );
+        //////////////////////////////////////////////////////////////////////////
+
+        /////////////////////////////////////////////書局維度長條圖/////////////////////////////////////////////////////////
+        //建立全域變數BookStoreBarChart儲存書局維度長條圖的SVG
+        window.BookStoreBarChart = dc.barChart("#BookStoreBarChart");
+        //增加書籍維度長條圖SVG的屬性
+        window.BookStoreBarChart
+            .width(400)//SVG寬度
+            .height(250)//SVG高度
+            .transitionDuration(500)//過場轉移動作，每次時以0.5秒延遲輸出
+            .margins({ top: 10, right: 50, bottom: 30, left: 40 })//加入margins的CSS
+            .dimension(Bookstore)//加入書局的維度資料
+            .group(QuantityByBookstore)//加入書局維度的存貨數量
+
+             .title(function (d) { return " \書籍數量: " + d.data.value; })//當移動到長條圖時，會以前綴資訊秀出書籍數量
+            .x(d3.scale.ordinal().domain(BookStoreDomain))//x軸是以序數尺度呈現，其domain會呼叫
+                                                                                                         //BookStoreDomain所回傳的書局名稱陣列
+            .xUnits(dc.units.ordinal)//輸出x軸domain裡的書局名稱
+            .y(d3.scale.linear().domain([d3.min(dataset,
+                function (d) { return d.quantity; }) - 10, d3.max(dataset, function (d) { return d.quantity; }) + 200]))
+            //y軸是以線性尺度呈現，其範圍為0~900
+            .centerBar(true)//輸出的長條圖設為置中
+
+            .renderHorizontalGridLines(true)//輸出圖表的GridLine
+
+        .renderlet(
+        //呈現bar chart 標籤文字
+        function (Label) {
+            var barsData = [];
+            var bars = Label.selectAll('.bar').each(function (d) { barsData.push(d); });
+
+            //Remove old values (if found)
+            d3.select(bars[0][0].parentNode).select('#inline-labels').remove();
+            //Create group for labels
+            var gLabels = d3.select(bars[0][0].parentNode).append('g').attr('id', 'inline-labels');
+
+            for (var i = bars[0].length - 1; i >= 0; i--) {
+
+                var b = bars[0][i];
+                //Only create label if bar height is tall enough
+                if (+b.getAttribute('height') < 10) continue;
+                gLabels
+                    .append("text")
+                    .text(barsData[i].data.value)
+                    .attr('x', +b.getAttribute('x') + (b.getAttribute('width') / 2))
+                    .attr('y', +b.getAttribute('y') + 15)
+                    .attr('text-anchor', 'middle')
+                    .attr('fill', 'white');
+            }
+
+        }
+        )
+        .renderlet(
+        //當點擊長條圖時，會以彈跳視窗秀出書局所擁有的書籍數量
+         function (bar) {
+             bar.selectAll(".dc-chart rect.bar")
+                 .on("mouseover", function (d) {
+                     console.log(d.data.key + "的書籍總數量為" + d.data.value + "本");
+
+                 })
+         }
+
+        );
+        /////////////////////////////////////////出版社維度長條圖///////////////////////////////////
+        //建立全域變數BookBarChart儲存書籍維度長條圖的SVG
+        window.PublisherBarChart = dc.barChart("#PublisherBarChart");
+        //增加書籍維度長條圖SVG的屬性
+        window.PublisherBarChart
+         .width(600)//SVG寬度
+        .height(250)//SVG高度
+        .transitionDuration(500)//過場轉移動作，每次時以0.5秒延遲輸出
+        .margins({ top: 10, right: 50, bottom: 30, left: 40 })//加入margins的CSS
+        .dimension(Publisher)//加入書籍的維度資料
+        .group(QuantityByPublisher)//加入書籍維度的存貨數量
+        .x(d3.scale.ordinal().domain(PublisherDomain))//x軸是以序數尺度呈現，其domain會呼叫BookDomain所回傳的書籍名稱陣列
+       .xUnits(dc.units.ordinal)//輸出x軸domain裡的書籍名稱
+        .y(d3.scale.linear().domain([d3.min(dataset, function (d) { return d.quantity; }) - 10, d3.max(dataset, function (d) { return d.quantity; }) + 200]))//y軸是以線性尺度呈現，其範圍為0~900
+        .centerBar(true)//輸出的長條圖設為置中
+        .renderHorizontalGridLines(true)//輸出圖表的GridLine
+        .title(function (d) { return " \書籍數量: " + d.data.value; })//當移動到長條圖時，會以前綴資訊秀出書籍數量
+        .renderlet(
+                //呈現bar chart 標籤文字
+                function (Label) {
+                    var barsData = [];
+                    var bars = Label.selectAll('.bar').each(function (d) { barsData.push(d); });
+
+                    //Remove old values (if found)
+                    d3.select(bars[0][0].parentNode).select('#inline-labels').remove();
+                    //Create group for labels
+                    var gLabels = d3.select(bars[0][0].parentNode).append('g').attr('id', 'inline-labels');
+
+                    for (var i = bars[0].length - 1; i >= 0; i--) {
+
+                        var b = bars[0][i];
+                        //Only create label if bar height is tall enough
+                        if (+b.getAttribute('height') < 18) continue;
+                        gLabels
+                            .append("text")
+                            .text(barsData[i].data.value)
+                            .attr('x', +b.getAttribute('x') + (b.getAttribute('width') / 2))
+                            .attr('y', +b.getAttribute('y') + 15)
+                            .attr('text-anchor', 'middle')
+                            .attr('fill', 'white');
+                    }
+
+                }
+            )
+        .renderlet(
+          //當點擊長條圖時，會以彈跳視窗秀出書局所擁有的書籍數量
+        function (bar) {
+            bar.selectAll(".dc-chart rect.bar")
+                     .on("mouseover", function (d) {
+                         console.log(d.data.key + "的書籍總數量為" + d.data.value + "本");
+
+                     })
+        }
+        );
+        //////////////////////////////////////////////////////////////////////////
+        //////////////////////////////總存貨維度長條圖///////////////////////////
+        window.QuantityBarChart = dc.barChart("#QuantityBarChart");
+        window.QuantityBarChart
+    .width(300)
+    .height(250)
+    .dimension(Quantity)
+    .group(QuantityGroup)
+    .x(d3.scale.linear().domain([d3.min(dataset, function (d) { return d.quantity; }) + 2, d3.max(dataset, function (d) { return d.quantity; }) + 2]))
+    .elasticY(true)
+    .centerBar(true)
+    .xAxisLabel('總存貨數量')
+    .yAxisLabel('總數')
+   .xUnits(function (d) { return (d.quantity) / 20; })
+    .margins({ top: 10, right: 20, bottom: 50, left: 50 });
+        ///////////////////////////////////////////////////////////
+
+        /*書局維度表*/
+        dataTable = dc.dataTable('#data-table');
+        dataTable
+   .dimension(AllDim)
+   .group(function (d) { return '<span class="label label-success">' + d.name + '</span>'; })
+
+   .columns([
+        function (d) { return d.publisher; },
+     function (d) { return d.bookname; },
+     function (d) { return d.quantity; },
+     function (d) { return "<a href=Orders/Edit/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Edit" + "</a>"; },
+     function (d) { return "<a href=Orders/Delete/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Delete" + "</a>"; }
+   ])
+            .renderlet(function (d) { return console.log(d); })
+            .sortBy(function (d) { return d.quantity; })
+.order(d3.descending);
+        /*書籍維度表*/
+        dataTable2 = dc.dataTable('#data-table2');
+        dataTable2
+   .dimension(AllDim)
+   .group(function (d) { return '<span class="label label-success">' + d.bookname + '</span>'; })
+   .columns([
+       function (d) { return d.publisher; },
+     function (d) { return d.name; },
+     function (d) { return d.quantity; },
+     function (d) { return "<a href=Orders/Edit/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Edit" + "</a>"; },
+     function (d) { return "<a href=Orders/Delete/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Delete" + "</a>"; }
+   ])
+.sortBy(function (d) { return d.quantity; })
+.order(dc.descending);
+        /*總表*/
+        dataTable3 = dc.dataTable('#data-table3');
+        dataTable3
+   .dimension(AllDim)
+   .group(function (d) { return 'Total'; })
+   .columns([
+         function (d) { return d.publisher; },
+     function (d) { return d.name; },
+     function (d) { return d.bookname; },
+     function (d) { return d.quantity; },
+     function (d) { return "<a href=Orders/Edit/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Edit" + "</a>"; },
+     function (d) { return "<a href=Orders/Delete/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Delete" + "</a>"; }
+   ])
+ .renderlet(
+          //當點擊長條圖時，會以彈跳視窗秀出書局所擁有的書籍數量
+        function (bar) {
+            bar.selectAll(".dc-table-row")
+                     .on("click", function (d) {
+                         console.log(d.name);
+
+                     })
+        }
+
+        )
+.sortBy(function (d) { return d.quantity; })
+.order(dc.descending);
+        /*出版社維度表*/
+        dataTable4 = dc.dataTable('#data-table4');
+        dataTable4
+   .dimension(AllDim)
+ .group(function (d) { return '<span class="label label-success">' + d.publisher + '</span>'; })
+   .columns([
+     function (d) { return d.name; },
+     function (d) { return d.bookname; },
+     function (d) { return d.quantity; },
+     function (d) { return "<a href=Orders/Edit/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Edit" + "</a>"; },
+     function (d) { return "<a href=Orders/Delete/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Delete" + "</a>"; }
+   ])
+.sortBy(function (d) { return d.quantity; })
+.order(dc.descending);
+
+        dc.renderAll();//輸出全部圖表
+    };
+    //還原圖表function
+    function ResetOption() {
+        //-------------還原過濾前的圖表-------------------//
+        //還原全部圖表
+        d3.selectAll('#restall').on('click', function () {
+            dc.filterAll();//清除過濾條件
+            dc.renderAll();//重輸出全部圖表
+        });
+        //還原書局維度長條圖
+        d3.selectAll('#resetBookStoreBarChart').on('click', function () {
+            window.BookStoreBarChart.filterAll();//清除過濾條件
+            dc.redrawAll();//重輸出該圖表
+        });
+        //還原書籍維度長條圖
+        d3.selectAll('#resetBookBarChart').on('click', function () {
+            window.BookBarChart.filterAll();//清除過濾條件
+            dc.redrawAll();//重輸出該圖表
+        });
+        //------------------------------------------------------//
+        //還原書籍維度長條圖
+        d3.selectAll('#resetPublisherBarChart').on('click', function () {
+            window.PublisherBarChart.filterAll();//清除過濾條件
+            dc.redrawAll();//重輸出該圖表
+        });
+        //------------------------------------------------------//
+    };
+</script>
+<!--bootstrap tab-->
+<script type="text/javascript">
+    $(document).ready(function ($) {
+        $('#tabs').tab();
+    });
+</script>

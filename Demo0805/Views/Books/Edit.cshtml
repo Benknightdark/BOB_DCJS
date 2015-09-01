@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = "~/Views/_template.cshtml";
+}
+@model Demo0805.Models.book
+@using (Html.BeginForm())
+{
+    <div class="table">
+        <table class="table table-bordered table-hover">
+            <tr class="success">
+
+                <th> @Html.DisplayNameFor(model => model.id) </th>
+                <th> @Html.DisplayNameFor(model => model.bookname) </th>
+                <th> @Html.DisplayNameFor(model => model.author) </th>
+                <th> @Html.DisplayNameFor(model => model.publisher)  </th>
+                <th> @Html.DisplayNameFor(model => model.price)  </th>
+            </tr>
+
+            <tr>
+                <td>   @Html.DisplayFor(model => model.id)  </td>
+                <td>
+                    @Html.EditorFor(model => model.bookname)   @Html.ValidationMessageFor(model => model.bookname)
+                </td>
+                <td>   @Html.EditorFor(model => model.author)   @Html.ValidationMessageFor(model => model.author)</td>
+                <td>   @Html.EditorFor(model => model.publisher)   @Html.ValidationMessageFor(model => model.publisher)</td>
+                <td>   @Html.EditorFor(model => model.price)   @Html.ValidationMessageFor(model => model.price)</td>
+            </tr>
+        </table>
+    </div>
+
+    @Html.ValidationSummary(true)
+    @Html.AntiForgeryToken()
+    <input id="Submit1" type="submit" value="更新" class="btn btn-success btn-lg active glyphicon glyphicon-remove" />
+    @Html.ActionLink("回上一頁", "Index","Books")
+}
+
+

@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/_template.cshtml";
+}
+
+<h3><span class="label label-success">@ViewBag.BookStoreName</span></h3>
+
+@model IEnumerable<Demo0805.Models.BookLists.BookSelect>
+
+@if (Model.Count() != 0)
+{
+    <div class="form-group">
+        <div class="table">
+            <table class="table table-bordered table-hover">
+                <tr class="success">
+
+                    <th> @Html.DisplayNameFor(model => model.author) </th>
+                    <th> @Html.DisplayNameFor(model => model.bookname) </th>
+                    <th> @Html.DisplayNameFor(model => model.quantity) </th>
+
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>   @Html.DisplayFor(modelItem => item.author)   </td>
+                        <td>   @Html.DisplayFor(modelItem => item.bookname) </td>
+                        <td>   @Html.DisplayFor(modelItem => item.quantity) </td>
+                    </tr>
+
+                }
+            </table>
+        </div>
+
+
+
+    </div>
+}
+else
+{
+    <h5>無資料</h5>
+}
+
+@Html.ActionLink("回上一頁", "Index")

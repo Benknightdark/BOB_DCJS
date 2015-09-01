@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = "~/Views/_template.cshtml";
+}
+
+@model IEnumerable<Demo0805.Models.BookLists.BookAll>
+
+<div class="form-group">
+<div class="table">
+    <table class="table table-bordered table-hover">
+        <tr class="success">
+
+            <th> @Html.DisplayNameFor(model => model.name) </th>
+            <th> @Html.DisplayNameFor(model => model.amount) </th>
+            
+            
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>   @Html.DisplayFor(modelItem => item.name)   </td>
+                <td>   @Html.DisplayFor(modelItem => item.amount) </td>             
+            </tr>
+
+        }
+    </table>
+</div>
+@Html.ActionLink("回上一頁", "Index")
+
+
+</div>

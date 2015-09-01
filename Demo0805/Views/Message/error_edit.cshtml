@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "error";
+    Layout = "~/Views/_template.cshtml";
+}
+@model System.Web.Mvc.HandleErrorInfo
+<h5>資料不能重覆輸入</h5>
+
+
+@Html.ActionLink("回上一頁", "Index", "Bookstores")

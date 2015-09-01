@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = "~/Views/_template.cshtml";
+}
+@model IEnumerable<Demo0805.Models.BOBOrderList.OrderList>
+
+<h2>@ViewBag.m </h2>
+<div class="form-group">
+    <div class="table">
+        <table class="table table-bordered table-hover">
+            <tr class="success">
+
+                <th> @Html.DisplayNameFor(model => model.name) </th>
+                <th> @Html.DisplayNameFor(model => model.bookname) </th>
+                <th> @Html.DisplayNameFor(model => model.quantity) </th>
+            </tr>
+
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>   @Html.DisplayFor(modelItem => item.name)   </td>
+                    <td>   @Html.DisplayFor(modelItem => item.bookname)   </td>
+                    <td>   @Html.DisplayFor(modelItem => item.quantity)   </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+
+</div>
+<a href="/Orders" class="btn btn-primary btn-lg active glyphicon glyphicon-backward" role="button">Back</a>
+
+
+
+
+
+
+
+
+

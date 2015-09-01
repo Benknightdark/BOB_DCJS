@@ -1,0 +1,1310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BOBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="birthdate_books">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="bookname" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="author" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="birthdate" Type="smalldatetime" />
+          <Property Name="price" Type="smallint" Nullable="false" />
+          <Property Name="publisher" Type="char" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="books">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="bookname" Type="char" MaxLength="50" />
+          <Property Name="author" Type="char" MaxLength="30" />
+          <Property Name="price" Type="smallint" />
+          <Property Name="publisher" Type="char" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="bookstores">
+          <Key>
+            <PropertyRef Name="no" />
+          </Key>
+          <Property Name="no" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="4000" />
+          <Property Name="rank" Type="bigint" />
+          <Property Name="city" Type="nvarchar" MaxLength="4000" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'BOB.dbo.CD音樂' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="CD音樂">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nchar" MaxLength="30" />
+          <Property Name="Type" Type="nchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="date_orders">
+          <Key>
+            <PropertyRef Name="order_date" />
+          </Key>
+          <Property Name="order_date" Type="smalldatetime" Nullable="false" />
+          <Property Name="no" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="quantity" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="dept" />
+          </Key>
+          <Property Name="dept" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="name" Type="char" MaxLength="30" />
+          <Property Name="manager" Type="char" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="char" MaxLength="20" />
+          <Property Name="dept" Type="char" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="EventLog">
+          <Key>
+            <PropertyRef Name="PostTime" />
+          </Key>
+          <Property Name="PostTime" Type="datetime" Nullable="false" />
+          <Property Name="EventType" Type="char" MaxLength="30" />
+          <Property Name="ServerName" Type="char" MaxLength="50" />
+          <Property Name="LoginName" Type="char" MaxLength="100" />
+          <Property Name="UserName" Type="char" MaxLength="100" />
+          <Property Name="DatabaseName" Type="char" MaxLength="50" />
+          <Property Name="SchemaName" Type="char" MaxLength="30" />
+          <Property Name="ObjectName" Type="char" MaxLength="30" />
+          <Property Name="ObjectType" Type="char" MaxLength="30" />
+          <Property Name="TSQLCommand" Type="nvarchar(max)" />
+          <Property Name="CommandText" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="startdate" Type="datetime" Nullable="false" />
+          <Property Name="enddate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LogonModel">
+          <Key>
+            <PropertyRef Name="Account" />
+          </Key>
+          <Property Name="Account" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Password" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Remember" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'BOB.dbo.Mbooks' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="Mbooks">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="bookname" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="bookname" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="author" Type="char" MaxLength="30" />
+          <Property Name="price" Type="smallint" />
+          <Property Name="publisher" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Members">
+          <Key>
+            <PropertyRef Name="no" />
+          </Key>
+          <Property Name="no" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="address" Type="char" MaxLength="30" />
+          <Property Name="cell_phone" Type="char" MaxLength="15" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'BOB.dbo.Month_Sales' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="Month_Sales">
+          <Key>
+            <PropertyRef Name="pk" />
+          </Key>
+          <Property Name="pk" Type="int" Nullable="false" />
+          <Property Name="name" Type="nchar" MaxLength="20" />
+          <Property Name="month" Type="tinyint" />
+          <Property Name="sales" Type="smallint" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'BOB.dbo.Nbooks' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="Nbooks">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="bookname" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="bookname" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="author" Type="char" MaxLength="30" />
+          <Property Name="price" Type="smallint" />
+          <Property Name="publisher" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Nums">
+          <Key>
+            <PropertyRef Name="n" />
+          </Key>
+          <Property Name="n" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="orders">
+          <Key>
+            <PropertyRef Name="no" />
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="no" Type="bigint" Nullable="false" />
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="quantity" Type="int" />
+        </EntityType>
+        <EntityType Name="Product_Name">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Prod_Name" Type="nchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Product_Property">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Attr_Name" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Attr_Name" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Value" Type="nchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'BOB.dbo.PV' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="PV">
+          <Key>
+            <PropertyRef Name="bookname" />
+          </Key>
+          <Property Name="bookname" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="巨蟹書局" Type="int" />
+          <Property Name="射手書局" Type="int" />
+          <Property Name="水瓶書局" Type="int" />
+          <Property Name="天秤書局" Type="int" />
+          <Property Name="獅子書局" Type="int" />
+        </EntityType>
+        <EntityType Name="Sales">
+          <Key>
+            <PropertyRef Name="eno" />
+          </Key>
+          <Property Name="eno" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="name" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="manager" Type="char" MaxLength="10" />
+          <Property Name="achievement" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SalesManagers">
+          <Key>
+            <PropertyRef Name="eno" />
+          </Key>
+          <Property Name="eno" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="name" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="manager" Type="char" MaxLength="10" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'BOB.dbo.Schedule' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="Schedule">
+          <Key>
+            <PropertyRef Name="車次" />
+            <PropertyRef Name="車種" />
+            <PropertyRef Name="起站" />
+            <PropertyRef Name="終站" />
+            <PropertyRef Name="開車時間" />
+            <PropertyRef Name="到站時間" />
+          </Key>
+          <Property Name="車次" Type="int" Nullable="false" />
+          <Property Name="車種" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="起站" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="終站" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="開車時間" Type="int" Nullable="false" />
+          <Property Name="到站時間" Type="int" Nullable="false" />
+          <Property Name="經過站名" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Students">
+          <Key>
+            <PropertyRef Name="no" />
+          </Key>
+          <Property Name="no" Type="int" Nullable="false" />
+          <Property Name="name" Type="char" MaxLength="20" />
+          <Property Name="class" Type="char" MaxLength="10" />
+          <Property Name="zip" Type="char" MaxLength="5" />
+          <Property Name="address" Type="char" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="ToBeUpdated">
+          <Key>
+            <PropertyRef Name="no" />
+          </Key>
+          <Property Name="no" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="address" Type="char" MaxLength="30" />
+          <Property Name="cell_phone" Type="char" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="Trips">
+          <Key>
+            <PropertyRef Name="車次" />
+          </Key>
+          <Property Name="車次" Type="int" Nullable="false" />
+          <Property Name="車種" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="起站" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="終站" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="開車時間" Type="int" Nullable="false" />
+          <Property Name="到站時間" Type="int" Nullable="false" />
+          <Property Name="經過站名" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="XMLBooks">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="bookname" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="author" Type="xml" />
+        </EntityType>
+        <EntityType Name="Zipdata">
+          <Key>
+            <PropertyRef Name="zip" />
+          </Key>
+          <Property Name="zip" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="district" Type="char" MaxLength="20" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'BOB.dbo.書籍' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="書籍">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Author" Type="nchar" MaxLength="30" />
+          <Property Name="Bookname" Type="nchar" MaxLength="30" />
+          <Property Name="Price" Type="nchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="xml_tab">
+          <Key>
+            <PropertyRef Name="the_id" />
+          </Key>
+          <Property Name="the_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="xml_col" Type="xml" />
+        </EntityType>
+        <Association Name="FK_date_orders_birthdate_books">
+          <End Role="birthdate_books" Type="Self.birthdate_books" Multiplicity="1" />
+          <End Role="date_orders" Type="Self.date_orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="birthdate_books">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="date_orders">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Department">
+          <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="dept" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="dept" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_orders_books">
+          <End Role="books" Type="Self.books" Multiplicity="1" />
+          <End Role="orders" Type="Self.orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="books">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_orders_bookstores">
+          <End Role="bookstores" Type="Self.bookstores" Multiplicity="1" />
+          <End Role="orders" Type="Self.orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bookstores">
+              <PropertyRef Name="no" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="no" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_Property_Product_Name">
+          <End Role="Product_Name" Type="Self.Product_Name" Multiplicity="1" />
+          <End Role="Product_Property" Type="Self.Product_Property" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product_Name">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Product_Property">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sales_SalesManagers">
+          <End Role="SalesManagers" Type="Self.SalesManagers" Multiplicity="0..1" />
+          <End Role="Sales" Type="Self.Sales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SalesManagers">
+              <PropertyRef Name="eno" />
+            </Principal>
+            <Dependent Role="Sales">
+              <PropertyRef Name="manager" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SalesManagers_SalesManagers">
+          <End Role="SalesManagers" Type="Self.SalesManagers" Multiplicity="0..1" />
+          <End Role="SalesManagers1" Type="Self.SalesManagers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SalesManagers">
+              <PropertyRef Name="eno" />
+            </Principal>
+            <Dependent Role="SalesManagers1">
+              <PropertyRef Name="manager" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Students_Zipdata">
+          <End Role="Zipdata" Type="Self.Zipdata" Multiplicity="0..1" />
+          <End Role="Students" Type="Self.Students" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zipdata">
+              <PropertyRef Name="zip" />
+            </Principal>
+            <Dependent Role="Students">
+              <PropertyRef Name="zip" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BOBModelStoreContainer">
+          <EntitySet Name="birthdate_books" EntityType="Self.birthdate_books" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="books" EntityType="Self.books" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="bookstores" EntityType="Self.bookstores" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="date_orders" EntityType="Self.date_orders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EventLog" EntityType="Self.EventLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Log" EntityType="Self.Log" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LogonModel" EntityType="Self.LogonModel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Members" EntityType="Self.Members" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Nums" EntityType="Self.Nums" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="orders" EntityType="Self.orders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product_Name" EntityType="Self.Product_Name" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product_Property" EntityType="Self.Product_Property" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sales" EntityType="Self.Sales" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SalesManagers" EntityType="Self.SalesManagers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ToBeUpdated" EntityType="Self.ToBeUpdated" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Trips" EntityType="Self.Trips" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="XMLBooks" EntityType="Self.XMLBooks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Zipdata" EntityType="Self.Zipdata" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="xml_tab" EntityType="Self.xml_tab" Schema="xml" store:Type="Tables" />
+          <EntitySet Name="CD音樂" EntityType="Self.CD音樂" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CD音樂].[id] AS [id], 
+    [CD音樂].[Title] AS [Title], 
+    [CD音樂].[Type] AS [Type]
+    FROM [dbo].[CD音樂] AS [CD音樂]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Mbooks" EntityType="Self.Mbooks" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Mbooks].[id] AS [id], 
+    [Mbooks].[bookname] AS [bookname], 
+    [Mbooks].[author] AS [author], 
+    [Mbooks].[price] AS [price], 
+    [Mbooks].[publisher] AS [publisher]
+    FROM [dbo].[Mbooks] AS [Mbooks]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Month_Sales" EntityType="Self.Month_Sales" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Month_Sales].[pk] AS [pk], 
+    [Month_Sales].[name] AS [name], 
+    [Month_Sales].[month] AS [month], 
+    [Month_Sales].[sales] AS [sales]
+    FROM [dbo].[Month_Sales] AS [Month_Sales]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Nbooks" EntityType="Self.Nbooks" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Nbooks].[id] AS [id], 
+    [Nbooks].[bookname] AS [bookname], 
+    [Nbooks].[author] AS [author], 
+    [Nbooks].[price] AS [price], 
+    [Nbooks].[publisher] AS [publisher]
+    FROM [dbo].[Nbooks] AS [Nbooks]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PV" EntityType="Self.PV" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PV].[bookname] AS [bookname], 
+    [PV].[巨蟹書局] AS [巨蟹書局], 
+    [PV].[射手書局] AS [射手書局], 
+    [PV].[水瓶書局] AS [水瓶書局], 
+    [PV].[天秤書局] AS [天秤書局], 
+    [PV].[獅子書局] AS [獅子書局]
+    FROM [dbo].[PV] AS [PV]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Schedule" EntityType="Self.Schedule" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Schedule].[車次] AS [車次], 
+    [Schedule].[車種] AS [車種], 
+    [Schedule].[起站] AS [起站], 
+    [Schedule].[終站] AS [終站], 
+    [Schedule].[開車時間] AS [開車時間], 
+    [Schedule].[到站時間] AS [到站時間], 
+    [Schedule].[經過站名] AS [經過站名]
+    FROM [dbo].[Schedule] AS [Schedule]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="書籍" EntityType="Self.書籍" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [書籍].[id] AS [id], 
+    [書籍].[Author] AS [Author], 
+    [書籍].[Bookname] AS [Bookname], 
+    [書籍].[Price] AS [Price]
+    FROM [dbo].[書籍] AS [書籍]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_date_orders_birthdate_books" Association="Self.FK_date_orders_birthdate_books">
+            <End Role="birthdate_books" EntitySet="birthdate_books" />
+            <End Role="date_orders" EntitySet="date_orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Department" Association="Self.FK_Employee_Department">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_orders_books" Association="Self.FK_orders_books">
+            <End Role="books" EntitySet="books" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_orders_bookstores" Association="Self.FK_orders_bookstores">
+            <End Role="bookstores" EntitySet="bookstores" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Property_Product_Name" Association="Self.FK_Product_Property_Product_Name">
+            <End Role="Product_Name" EntitySet="Product_Name" />
+            <End Role="Product_Property" EntitySet="Product_Property" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sales_SalesManagers" Association="Self.FK_Sales_SalesManagers">
+            <End Role="SalesManagers" EntitySet="SalesManagers" />
+            <End Role="Sales" EntitySet="Sales" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SalesManagers_SalesManagers" Association="Self.FK_SalesManagers_SalesManagers">
+            <End Role="SalesManagers" EntitySet="SalesManagers" />
+            <End Role="SalesManagers1" EntitySet="SalesManagers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Students_Zipdata" Association="Self.FK_Students_Zipdata">
+            <End Role="Zipdata" EntitySet="Zipdata" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BOBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="birthdate_books">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="bookname" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="author" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="birthdate" Type="DateTime" Precision="0" />
+          <Property Name="price" Type="Int16" Nullable="false" />
+          <Property Name="publisher" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="date_orders" Relationship="Self.FK_date_orders_birthdate_books" FromRole="birthdate_books" ToRole="date_orders" />
+        </EntityType>
+        <EntityType Name="book">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bookname" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="author" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="price" Type="Int16" />
+          <Property Name="publisher" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="orders" Relationship="Self.FK_orders_books" FromRole="books" ToRole="orders" />
+        </EntityType>
+        <EntityType Name="bookstore">
+          <Key>
+            <PropertyRef Name="no" />
+          </Key>
+          <Property Name="no" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="rank" Type="Int64" />
+          <Property Name="city" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="orders" Relationship="Self.FK_orders_bookstores" FromRole="bookstores" ToRole="orders" />
+        </EntityType>
+        <EntityType Name="date_orders">
+          <Key>
+            <PropertyRef Name="order_date" />
+          </Key>
+          <Property Name="order_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="no" Type="Int32" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="quantity" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="birthdate_books" Relationship="Self.FK_date_orders_birthdate_books" FromRole="date_orders" ToRole="birthdate_books" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="dept" />
+          </Key>
+          <Property Name="dept" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="manager" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Employees" Relationship="Self.FK_Employee_Department" FromRole="Department" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="dept" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Department" Relationship="Self.FK_Employee_Department" FromRole="Employee" ToRole="Department" />
+        </EntityType>
+        <EntityType Name="EventLog">
+          <Key>
+            <PropertyRef Name="PostTime" />
+          </Key>
+          <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EventType" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="ServerName" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="LoginName" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Name="UserName" Type="String" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Name="DatabaseName" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="SchemaName" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="ObjectName" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="ObjectType" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="TSQLCommand" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CommandText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="startdate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="enddate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Member">
+          <Key>
+            <PropertyRef Name="no" />
+          </Key>
+          <Property Name="no" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="address" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="cell_phone" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Num">
+          <Key>
+            <PropertyRef Name="n" />
+          </Key>
+          <Property Name="n" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="order">
+          <Key>
+            <PropertyRef Name="no" />
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="no" Type="Int64" Nullable="false" />
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="quantity" Type="Int32" />
+          <NavigationProperty Name="book" Relationship="Self.FK_orders_books" FromRole="orders" ToRole="books" />
+          <NavigationProperty Name="bookstore" Relationship="Self.FK_orders_bookstores" FromRole="orders" ToRole="bookstores" />
+        </EntityType>
+        <EntityType Name="Product_Name">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Prod_Name" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Product_Property" Relationship="Self.FK_Product_Property_Product_Name" FromRole="Product_Name" ToRole="Product_Property" />
+        </EntityType>
+        <EntityType Name="Product_Property">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Attr_Name" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Attr_Name" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Value" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Product_Name" Relationship="Self.FK_Product_Property_Product_Name" FromRole="Product_Property" ToRole="Product_Name" />
+        </EntityType>
+        <EntityType Name="Sale">
+          <Key>
+            <PropertyRef Name="eno" />
+          </Key>
+          <Property Name="eno" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="manager" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="achievement" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SalesManager" Relationship="Self.FK_Sales_SalesManagers" FromRole="Sales" ToRole="SalesManagers" />
+        </EntityType>
+        <EntityType Name="SalesManager">
+          <Key>
+            <PropertyRef Name="eno" />
+          </Key>
+          <Property Name="eno" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="manager" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Sales" Relationship="Self.FK_Sales_SalesManagers" FromRole="SalesManagers" ToRole="Sales" />
+          <NavigationProperty Name="SalesManagers1" Relationship="Self.FK_SalesManagers_SalesManagers" FromRole="SalesManagers" ToRole="SalesManagers1" />
+          <NavigationProperty Name="SalesManager1" Relationship="Self.FK_SalesManagers_SalesManagers" FromRole="SalesManagers1" ToRole="SalesManagers" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="no" />
+          </Key>
+          <Property Name="no" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="class" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="zip" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Zipdata" Relationship="Self.FK_Students_Zipdata" FromRole="Students" ToRole="Zipdata" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="ToBeUpdated">
+          <Key>
+            <PropertyRef Name="no" />
+          </Key>
+          <Property Name="no" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="address" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="cell_phone" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Trip">
+          <Key>
+            <PropertyRef Name="車次" />
+          </Key>
+          <Property Name="車次" Type="Int32" Nullable="false" />
+          <Property Name="車種" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="起站" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="終站" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="開車時間" Type="Int32" Nullable="false" />
+          <Property Name="到站時間" Type="Int32" Nullable="false" />
+          <Property Name="經過站名" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="XMLBook">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="bookname" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="author" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Zipdata">
+          <Key>
+            <PropertyRef Name="zip" />
+          </Key>
+          <Property Name="zip" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="district" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Students" Relationship="Self.FK_Students_Zipdata" FromRole="Zipdata" ToRole="Students" />
+        </EntityType>
+        <EntityType Name="xml_tab">
+          <Key>
+            <PropertyRef Name="the_id" />
+          </Key>
+          <Property Name="the_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="xml_col" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CD音樂">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Mbook">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="bookname" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="bookname" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="author" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="price" Type="Int16" />
+          <Property Name="publisher" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Month_Sales">
+          <Key>
+            <PropertyRef Name="pk" />
+          </Key>
+          <Property Name="pk" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="month" Type="Byte" />
+          <Property Name="sales" Type="Int16" />
+        </EntityType>
+        <EntityType Name="Nbook">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="bookname" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="bookname" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="author" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="price" Type="Int16" />
+          <Property Name="publisher" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PV">
+          <Key>
+            <PropertyRef Name="bookname" />
+          </Key>
+          <Property Name="bookname" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="巨蟹書局" Type="Int32" />
+          <Property Name="射手書局" Type="Int32" />
+          <Property Name="水瓶書局" Type="Int32" />
+          <Property Name="天秤書局" Type="Int32" />
+          <Property Name="獅子書局" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Schedule">
+          <Key>
+            <PropertyRef Name="車次" />
+            <PropertyRef Name="車種" />
+            <PropertyRef Name="起站" />
+            <PropertyRef Name="終站" />
+            <PropertyRef Name="開車時間" />
+            <PropertyRef Name="到站時間" />
+          </Key>
+          <Property Name="車次" Type="Int32" Nullable="false" />
+          <Property Name="車種" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="起站" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="終站" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="開車時間" Type="Int32" Nullable="false" />
+          <Property Name="到站時間" Type="Int32" Nullable="false" />
+          <Property Name="經過站名" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="書籍">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Author" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="Bookname" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="Price" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_date_orders_birthdate_books">
+          <End Role="birthdate_books" Type="Self.birthdate_books" Multiplicity="1" />
+          <End Role="date_orders" Type="Self.date_orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="birthdate_books">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="date_orders">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_orders_books">
+          <End Role="books" Type="Self.book" Multiplicity="1" />
+          <End Role="orders" Type="Self.order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="books">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_orders_bookstores">
+          <End Role="bookstores" Type="Self.bookstore" Multiplicity="1" />
+          <End Role="orders" Type="Self.order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bookstores">
+              <PropertyRef Name="no" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="no" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Department">
+          <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="dept" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="dept" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_Property_Product_Name">
+          <End Role="Product_Name" Type="Self.Product_Name" Multiplicity="1" />
+          <End Role="Product_Property" Type="Self.Product_Property" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product_Name">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Product_Property">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sales_SalesManagers">
+          <End Role="SalesManagers" Type="Self.SalesManager" Multiplicity="0..1" />
+          <End Role="Sales" Type="Self.Sale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SalesManagers">
+              <PropertyRef Name="eno" />
+            </Principal>
+            <Dependent Role="Sales">
+              <PropertyRef Name="manager" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SalesManagers_SalesManagers">
+          <End Role="SalesManagers" Type="Self.SalesManager" Multiplicity="0..1" />
+          <End Role="SalesManagers1" Type="Self.SalesManager" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SalesManagers">
+              <PropertyRef Name="eno" />
+            </Principal>
+            <Dependent Role="SalesManagers1">
+              <PropertyRef Name="manager" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Students_Zipdata">
+          <End Role="Zipdata" Type="Self.Zipdata" Multiplicity="0..1" />
+          <End Role="Students" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zipdata">
+              <PropertyRef Name="zip" />
+            </Principal>
+            <Dependent Role="Students">
+              <PropertyRef Name="zip" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BOBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="birthdate_books" EntityType="Self.birthdate_books" />
+          <EntitySet Name="books" EntityType="Self.book" />
+          <EntitySet Name="bookstores" EntityType="Self.bookstore" />
+          <EntitySet Name="date_orders" EntityType="Self.date_orders" />
+          <EntitySet Name="Departments" EntityType="Self.Department" />
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="EventLogs" EntityType="Self.EventLog" />
+          <EntitySet Name="Logs" EntityType="Self.Log" />
+          <EntitySet Name="Members" EntityType="Self.Member" />
+          <EntitySet Name="Nums" EntityType="Self.Num" />
+          <EntitySet Name="orders" EntityType="Self.order" />
+          <EntitySet Name="Product_Name" EntityType="Self.Product_Name" />
+          <EntitySet Name="Product_Property" EntityType="Self.Product_Property" />
+          <EntitySet Name="Sales" EntityType="Self.Sale" />
+          <EntitySet Name="SalesManagers" EntityType="Self.SalesManager" />
+          <EntitySet Name="Students" EntityType="Self.Student" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="ToBeUpdateds" EntityType="Self.ToBeUpdated" />
+          <EntitySet Name="Trips" EntityType="Self.Trip" />
+          <EntitySet Name="XMLBooks" EntityType="Self.XMLBook" />
+          <EntitySet Name="Zipdatas" EntityType="Self.Zipdata" />
+          <EntitySet Name="xml_tab" EntityType="Self.xml_tab" />
+          <EntitySet Name="CD音樂" EntityType="Self.CD音樂" />
+          <EntitySet Name="Mbooks" EntityType="Self.Mbook" />
+          <EntitySet Name="Month_Sales" EntityType="Self.Month_Sales" />
+          <EntitySet Name="Nbooks" EntityType="Self.Nbook" />
+          <EntitySet Name="PVs" EntityType="Self.PV" />
+          <EntitySet Name="Schedules" EntityType="Self.Schedule" />
+          <EntitySet Name="書籍" EntityType="Self.書籍" />
+          <AssociationSet Name="FK_date_orders_birthdate_books" Association="Self.FK_date_orders_birthdate_books">
+            <End Role="birthdate_books" EntitySet="birthdate_books" />
+            <End Role="date_orders" EntitySet="date_orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_orders_books" Association="Self.FK_orders_books">
+            <End Role="books" EntitySet="books" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_orders_bookstores" Association="Self.FK_orders_bookstores">
+            <End Role="bookstores" EntitySet="bookstores" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Department" Association="Self.FK_Employee_Department">
+            <End Role="Department" EntitySet="Departments" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Property_Product_Name" Association="Self.FK_Product_Property_Product_Name">
+            <End Role="Product_Name" EntitySet="Product_Name" />
+            <End Role="Product_Property" EntitySet="Product_Property" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sales_SalesManagers" Association="Self.FK_Sales_SalesManagers">
+            <End Role="SalesManagers" EntitySet="SalesManagers" />
+            <End Role="Sales" EntitySet="Sales" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SalesManagers_SalesManagers" Association="Self.FK_SalesManagers_SalesManagers">
+            <End Role="SalesManagers" EntitySet="SalesManagers" />
+            <End Role="SalesManagers1" EntitySet="SalesManagers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Students_Zipdata" Association="Self.FK_Students_Zipdata">
+            <End Role="Zipdata" EntitySet="Zipdatas" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+          <EntitySet Name="LogonModels" EntityType="BOBModel.LogonModel" />
+        </EntityContainer>
+        <EntityType Name="LogonModel">
+          <Key>
+            <PropertyRef Name="Account" />
+          </Key>
+          <Property Name="Account" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Remember" Type="Boolean" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BOBModelStoreContainer" CdmEntityContainer="BOBEntities">
+          <EntitySetMapping Name="birthdate_books">
+            <EntityTypeMapping TypeName="BOBModel.birthdate_books">
+              <MappingFragment StoreEntitySet="birthdate_books">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="bookname" ColumnName="bookname" />
+                <ScalarProperty Name="author" ColumnName="author" />
+                <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="publisher" ColumnName="publisher" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="books">
+            <EntityTypeMapping TypeName="BOBModel.book">
+              <MappingFragment StoreEntitySet="books">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="bookname" ColumnName="bookname" />
+                <ScalarProperty Name="author" ColumnName="author" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="publisher" ColumnName="publisher" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bookstores">
+            <EntityTypeMapping TypeName="BOBModel.bookstore">
+              <MappingFragment StoreEntitySet="bookstores">
+                <ScalarProperty Name="no" ColumnName="no" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="rank" ColumnName="rank" />
+                <ScalarProperty Name="city" ColumnName="city" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="date_orders">
+            <EntityTypeMapping TypeName="BOBModel.date_orders">
+              <MappingFragment StoreEntitySet="date_orders">
+                <ScalarProperty Name="order_date" ColumnName="order_date" />
+                <ScalarProperty Name="no" ColumnName="no" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Departments">
+            <EntityTypeMapping TypeName="BOBModel.Department">
+              <MappingFragment StoreEntitySet="Department">
+                <ScalarProperty Name="dept" ColumnName="dept" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="manager" ColumnName="manager" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="BOBModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="dept" ColumnName="dept" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventLogs">
+            <EntityTypeMapping TypeName="BOBModel.EventLog">
+              <MappingFragment StoreEntitySet="EventLog">
+                <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+                <ScalarProperty Name="EventType" ColumnName="EventType" />
+                <ScalarProperty Name="ServerName" ColumnName="ServerName" />
+                <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="DatabaseName" ColumnName="DatabaseName" />
+                <ScalarProperty Name="SchemaName" ColumnName="SchemaName" />
+                <ScalarProperty Name="ObjectName" ColumnName="ObjectName" />
+                <ScalarProperty Name="ObjectType" ColumnName="ObjectType" />
+                <ScalarProperty Name="TSQLCommand" ColumnName="TSQLCommand" />
+                <ScalarProperty Name="CommandText" ColumnName="CommandText" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logs">
+            <EntityTypeMapping TypeName="BOBModel.Log">
+              <MappingFragment StoreEntitySet="Log">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="startdate" ColumnName="startdate" />
+                <ScalarProperty Name="enddate" ColumnName="enddate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Members">
+            <EntityTypeMapping TypeName="BOBModel.Member">
+              <MappingFragment StoreEntitySet="Members">
+                <ScalarProperty Name="no" ColumnName="no" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="cell_phone" ColumnName="cell_phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nums">
+            <EntityTypeMapping TypeName="BOBModel.Num">
+              <MappingFragment StoreEntitySet="Nums">
+                <ScalarProperty Name="n" ColumnName="n" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="orders">
+            <EntityTypeMapping TypeName="BOBModel.order">
+              <MappingFragment StoreEntitySet="orders">
+                <ScalarProperty Name="no" ColumnName="no" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Product_Name">
+            <EntityTypeMapping TypeName="BOBModel.Product_Name">
+              <MappingFragment StoreEntitySet="Product_Name">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Prod_Name" ColumnName="Prod_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Product_Property">
+            <EntityTypeMapping TypeName="BOBModel.Product_Property">
+              <MappingFragment StoreEntitySet="Product_Property">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Attr_Name" ColumnName="Attr_Name" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sales">
+            <EntityTypeMapping TypeName="BOBModel.Sale">
+              <MappingFragment StoreEntitySet="Sales">
+                <ScalarProperty Name="eno" ColumnName="eno" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="manager" ColumnName="manager" />
+                <ScalarProperty Name="achievement" ColumnName="achievement" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SalesManagers">
+            <EntityTypeMapping TypeName="BOBModel.SalesManager">
+              <MappingFragment StoreEntitySet="SalesManagers">
+                <ScalarProperty Name="eno" ColumnName="eno" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="manager" ColumnName="manager" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="BOBModel.Student">
+              <MappingFragment StoreEntitySet="Students">
+                <ScalarProperty Name="no" ColumnName="no" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="class" ColumnName="class" />
+                <ScalarProperty Name="zip" ColumnName="zip" />
+                <ScalarProperty Name="address" ColumnName="address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="BOBModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ToBeUpdateds">
+            <EntityTypeMapping TypeName="BOBModel.ToBeUpdated">
+              <MappingFragment StoreEntitySet="ToBeUpdated">
+                <ScalarProperty Name="no" ColumnName="no" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="cell_phone" ColumnName="cell_phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Trips">
+            <EntityTypeMapping TypeName="BOBModel.Trip">
+              <MappingFragment StoreEntitySet="Trips">
+                <ScalarProperty Name="車次" ColumnName="車次" />
+                <ScalarProperty Name="車種" ColumnName="車種" />
+                <ScalarProperty Name="起站" ColumnName="起站" />
+                <ScalarProperty Name="終站" ColumnName="終站" />
+                <ScalarProperty Name="開車時間" ColumnName="開車時間" />
+                <ScalarProperty Name="到站時間" ColumnName="到站時間" />
+                <ScalarProperty Name="經過站名" ColumnName="經過站名" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="XMLBooks">
+            <EntityTypeMapping TypeName="BOBModel.XMLBook">
+              <MappingFragment StoreEntitySet="XMLBooks">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="bookname" ColumnName="bookname" />
+                <ScalarProperty Name="author" ColumnName="author" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Zipdatas">
+            <EntityTypeMapping TypeName="BOBModel.Zipdata">
+              <MappingFragment StoreEntitySet="Zipdata">
+                <ScalarProperty Name="zip" ColumnName="zip" />
+                <ScalarProperty Name="district" ColumnName="district" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="xml_tab">
+            <EntityTypeMapping TypeName="BOBModel.xml_tab">
+              <MappingFragment StoreEntitySet="xml_tab">
+                <ScalarProperty Name="the_id" ColumnName="the_id" />
+                <ScalarProperty Name="xml_col" ColumnName="xml_col" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CD音樂">
+            <EntityTypeMapping TypeName="BOBModel.CD音樂">
+              <MappingFragment StoreEntitySet="CD音樂">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mbooks">
+            <EntityTypeMapping TypeName="BOBModel.Mbook">
+              <MappingFragment StoreEntitySet="Mbooks">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="bookname" ColumnName="bookname" />
+                <ScalarProperty Name="author" ColumnName="author" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="publisher" ColumnName="publisher" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Month_Sales">
+            <EntityTypeMapping TypeName="BOBModel.Month_Sales">
+              <MappingFragment StoreEntitySet="Month_Sales">
+                <ScalarProperty Name="pk" ColumnName="pk" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="month" ColumnName="month" />
+                <ScalarProperty Name="sales" ColumnName="sales" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nbooks">
+            <EntityTypeMapping TypeName="BOBModel.Nbook">
+              <MappingFragment StoreEntitySet="Nbooks">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="bookname" ColumnName="bookname" />
+                <ScalarProperty Name="author" ColumnName="author" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="publisher" ColumnName="publisher" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PVs">
+            <EntityTypeMapping TypeName="BOBModel.PV">
+              <MappingFragment StoreEntitySet="PV">
+                <ScalarProperty Name="bookname" ColumnName="bookname" />
+                <ScalarProperty Name="巨蟹書局" ColumnName="巨蟹書局" />
+                <ScalarProperty Name="射手書局" ColumnName="射手書局" />
+                <ScalarProperty Name="水瓶書局" ColumnName="水瓶書局" />
+                <ScalarProperty Name="天秤書局" ColumnName="天秤書局" />
+                <ScalarProperty Name="獅子書局" ColumnName="獅子書局" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Schedules">
+            <EntityTypeMapping TypeName="BOBModel.Schedule">
+              <MappingFragment StoreEntitySet="Schedule">
+                <ScalarProperty Name="車次" ColumnName="車次" />
+                <ScalarProperty Name="車種" ColumnName="車種" />
+                <ScalarProperty Name="起站" ColumnName="起站" />
+                <ScalarProperty Name="終站" ColumnName="終站" />
+                <ScalarProperty Name="開車時間" ColumnName="開車時間" />
+                <ScalarProperty Name="到站時間" ColumnName="到站時間" />
+                <ScalarProperty Name="經過站名" ColumnName="經過站名" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="書籍">
+            <EntityTypeMapping TypeName="BOBModel.書籍">
+              <MappingFragment StoreEntitySet="書籍">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Bookname" ColumnName="Bookname" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LogonModels">
+            <EntityTypeMapping TypeName="BOBModel.LogonModel">
+              <MappingFragment StoreEntitySet="LogonModel">
+                <ScalarProperty Name="Remember" ColumnName="Remember" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

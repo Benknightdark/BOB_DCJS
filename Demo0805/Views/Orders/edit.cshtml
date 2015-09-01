@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = "~/Views/_template.cshtml";
+}
+@model IEnumerable<Demo0805.Models.BOBOrderList.OrderList>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <div class="table">
+            <table class="table table-bordered table-hover">
+                <tr class="success">
+
+                    <th> @Html.DisplayNameFor(model => model.name) </th>
+                    <th> @Html.DisplayNameFor(model => model.bookname) </th>
+                    <th> @Html.DisplayNameFor(model => model.quantity) </th>
+                </tr>
+
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>   @Html.DisplayFor(modelItem => item.name)   </td>
+                        <td>   @Html.DisplayFor(modelItem => item.bookname)   </td>
+                        <td>   @Html.EditorFor(modelItem => item.quantity)   </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+
+    </div>
+    <input id="Submit1" type="submit" value="submit" />
+}
+
+
+
+

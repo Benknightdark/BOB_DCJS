@@ -1,0 +1,34 @@
+﻿@{
+
+    Layout = "~/Views/_template.cshtml";
+}
+@model Demo0805.Models.book
+
+<div class="table">
+    <table class="table table-bordered table-hover">
+        <tr class="success">
+
+            <th> @Html.DisplayNameFor(model => model.id) </th>
+            <th> @Html.DisplayNameFor(model => model.bookname) </th>
+            <th> @Html.DisplayNameFor(model => model.author) </th>
+            <th> @Html.DisplayNameFor(model => model.publisher)  </th>
+            <th> @Html.DisplayNameFor(model => model.price)  </th>
+        </tr>
+
+        <tr>
+            <td>   @Html.DisplayFor(model => model.id)   </td>
+            <td>   @Html.DisplayFor(model => model.bookname)   </td>
+            <td>   @Html.DisplayFor(model => model.author)   </td>
+            <td>   @Html.DisplayFor(model => model.publisher)   </td>
+            <td>   @Html.DisplayFor(model => model.price)   </td>
+        </tr>
+    </table>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    @Html.AntiForgeryToken()
+    <input id="Submit1" type="submit" value="刪除" class="btn btn-warning btn-lg active glyphicon glyphicon-remove" />
+    @Html.ActionLink("回上一頁", "Index")
+}

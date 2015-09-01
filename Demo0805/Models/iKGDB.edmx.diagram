@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d292093aa76744c9afa5a6f65f8b39f4" Name="Diagram1">
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabAnnualLeave" Width="1.5" PointX="27" PointY="219.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabAnnualLeaveCondition" Width="1.5" PointX="7.5" PointY="188.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabAttnEnv" Width="1.5" PointX="10.5" PointY="226.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.C__RefactorLog" Width="1.5" PointX="5.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabArea" Width="1.5" PointX="7.5" PointY="192.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabCatContent" Width="1.5" PointX="12.75" PointY="240.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabCategory" Width="1.5" PointX="7.5" PointY="195.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabClass" Width="1.5" PointX="7.5" PointY="202" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabCode" Width="1.5" PointX="3" PointY="189.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabColumn" Width="1.5" PointX="24" PointY="252.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabColumnsSetting" Width="1.5" PointX="29" PointY="243.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabContent" Width="1.5" PointX="10.5" PointY="230.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabDistrict" Width="1.5" PointX="7.5" PointY="206.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabEmpDeputy" Width="1.5" PointX="13.5" PointY="223" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabEmployee" Width="1.5" PointX="13.5" PointY="227.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabEmpOrg" Width="1.5" PointX="18.75" PointY="247.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabEmpProCert" Width="1.5" PointX="24.75" PointY="240.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabENV" Width="1.5" PointX="7.5" PointY="210.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabENVItem" Width="1.5" PointX="9.75" PointY="239.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabForgotPWD" Width="1.5" PointX="7.5" PointY="213.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabLangMapping" Width="1.5" PointX="13.5" PointY="235.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabMessage" Width="1.5" PointX="10.5" PointY="220.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabMessageContent" Width="1.5" PointX="15.75" PointY="241.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabNotify" Width="1.5" PointX="7.5" PointY="216.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabOrganization" Width="1.5" PointX="30" PointY="227.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabOrgEnv" Width="1.5" PointX="32.25" PointY="248.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabPersonal" Width="1.5" PointX="7.5" PointY="236.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabProCert" Width="1.5" PointX="16.5" PointY="223" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabProject" Width="1.5" PointX="15.75" PointY="228.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabProjectAttendee" Width="1.5" PointX="21" PointY="248.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabProjectClass" Width="1.5" PointX="19" PointY="234.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabProjectNode" Width="1.5" PointX="7.5" PointY="221" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabRole" Width="1.5" PointX="16.5" PointY="234.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabRoleAuth" Width="1.5" PointX="26.75" PointY="253" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabRoleUser" Width="1.5" PointX="23.75" PointY="249" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabTable" Width="1.5" PointX="21.75" PointY="239.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabType" Width="1.5" PointX="0.75" PointY="195.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabUser" Width="1.5" PointX="5.25" PointY="227.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabUserAuth" Width="1.5" PointX="15" PointY="257" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabWFForm" Width="1.5" PointX="7.5" PointY="225" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabWFProjectTest" Width="1.5" PointX="30" PointY="235.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabWFProjectTestHistory" Width="1.5" PointX="35.25" PointY="244.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabWFScheme" Width="1.5" PointX="7.5" PointY="229" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabWFSchemeHistory" Width="1.5" PointX="9.75" PointY="248.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.SampleDataTable" Width="1.5" PointX="5.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.sysdiagram" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.WorkflowGlobalParameter" Width="1.5" PointX="2.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.WorkflowInbox" Width="1.5" PointX="7.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.WorkflowProcessInstance" Width="1.5" PointX="7.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.WorkflowProcessInstancePersistence" Width="1.5" PointX="8.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.WorkflowProcessInstanceStatu" Width="1.5" PointX="4.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.WorkflowProcessScheme" Width="1.5" PointX="9.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.WorkflowProcessTimer" Width="1.5" PointX="9.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.WorkflowProcessTransitionHistory" Width="1.5" PointX="0.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.WorkflowRuntime" Width="1.5" PointX="10.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.WorkflowScheme" Width="1.5" PointX="9.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.CartItem" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.Cart" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.Catalog" Width="1.5" PointX="3.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.Product" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.RefProductCatalog" Width="1.5" PointX="6" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.Customer" Width="1.5" PointX="19.5" PointY="220.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.CustomerBusinessPartner" Width="1.5" PointX="21.75" PointY="229.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.CustomerBusinessType" Width="1.5" PointX="24.75" PointY="226" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.CustomerContactOwner" Width="1.5" PointX="24.75" PointY="231" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.CustomerContactPerson" Width="1.5" PointX="21.75" PointY="221.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.CustomerCreditLimit" Width="1.5" PointX="21.75" PointY="233.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.CustomerDelayPayment" Width="1.5" PointX="21.75" PointY="244.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.CustomerMonthlySalesAmount" Width="1.5" PointX="27.75" PointY="224" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.CustomerOutsourceAmount" Width="1.5" PointX="27.75" PointY="229" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.CustomerProductType" Width="1.5" PointX="27.75" PointY="234.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.CustomerSalesAmount" Width="1.5" PointX="24.75" PointY="236.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.CustomerSalesProductType" Width="1.5" PointX="24.75" PointY="221" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.CustomerSite" Width="1.5" PointX="30.75" PointY="218.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.DistributionChannel" Width="1.5" PointX="7.5" PointY="232.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.PartClass" Width="1.5" PointX="12.75" PointY="251" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.PartLovCode" Width="1.5" PointX="12.75" PointY="245.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.PartLovKind" Width="1.5" PointX="7.5" PointY="245" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.PartLovType" Width="1.5" PointX="7.5" PointY="249" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.PartSerialNoRule" Width="1.5" PointX="7.5" PointY="253.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.PartType" Width="1.5" PointX="7.5" PointY="259" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.PartTypeClass" Width="1.5" PointX="9.75" PointY="252.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.PartTypeMaterialModel" Width="1.5" PointX="15.75" PointY="252.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.PartTypeSerialNo" Width="1.5" PointX="9.75" PointY="243.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.SalesArea" Width="1.5" PointX="7.5" PointY="263.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.SalesOrganization" Width="1.5" PointX="7.5" PointY="267" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabEmpLeave" Width="1.5" PointX="12.75" PointY="255.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabEmpLeaveDay" Width="1.5" PointX="15" PointY="270.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabEmpOvertime" Width="1.5" PointX="21" PointY="253.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabEmpProcEff" Width="1.5" PointX="21" PointY="260.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabEmpSkill" Width="1.5" PointX="15.75" PointY="247.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabEmpSkillClass" Width="1.5" PointX="27" PointY="239.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabEmpTaskAssign" Width="1.5" PointX="26" PointY="247.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabEmpTaskDailyRecord" Width="1.5" PointX="31.25" PointY="253" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabLeaveCode" Width="1.5" PointX="7.5" PointY="270.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabOffDay" Width="1.5" PointX="13.5" PointY="218.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabOvertimeCode" Width="1.5" PointX="7.5" PointY="276.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabPayControl" Width="1.5" PointX="18.75" PointY="241.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabPayPeriod" Width="1.5" PointX="16.5" PointY="215.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabProcedure" Width="1.5" PointX="7.5" PointY="280.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabProCertSkill" Width="1.5" PointX="18.75" PointY="257" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabSkill" Width="1.5" PointX="9.75" PointY="258.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabSkillType" Width="1.5" PointX="7.5" PointY="290.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabTask" Width="1.5" PointX="29" PointY="248" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabTaskDetail" Width="1.5" PointX="37.25" PointY="249.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabTaskEnv" Width="1.5" PointX="7.5" PointY="299" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabTaskKind" Width="1.5" PointX="7.5" PointY="294.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabTaskProcedure" Width="1.5" PointX="34.25" PointY="236.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabTaskProject" Width="1.5" PointX="33" PointY="228.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabTaskProperty" Width="1.5" PointX="37.25" PointY="253.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabTaskPropTemplate" Width="1.5" PointX="18.5" PointY="230" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabWorkCode" Width="1.5" PointX="7.5" PointY="311.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabWorkGroup" Width="1.5" PointX="7.5" PointY="307.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.InfoFabWorkPattern" Width="1.5" PointX="9.75" PointY="271" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.JJMFEmpProcedure" Width="1.5" PointX="34.25" PointY="273.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.JJMFEmpTaskDailyDisplay" Width="1.5" PointX="37.25" PointY="270.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.JJMFEmpTaskDailyRecord" Width="1.5" PointX="34.25" PointY="253.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.JJMFProcedure" Width="1.5" PointX="7.5" PointY="318.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.JJMFTask" Width="1.5" PointX="32" PointY="242.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.JJMFTaskCal" Width="1.5" PointX="37.25" PointY="276.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iKGDBModel.JJMFTaskCalItem" Width="1.5" PointX="39.5" PointY="252.5" IsExpanded="true" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabAnnualLeave_InfoFabAnnualLeaveCondition_ALConditionID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabAnnualLeave_InfoFabEmpOrg_EmpOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabAnnualLeave_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabAnnualLeave_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabAnnualLeaveCondition_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabAnnualLeaveCondition_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabAttnEnv_InfoFabCode_DefaultLeaveDeputyType" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabAttnEnv_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabAttnEnv_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabArea_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabArea_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabCatContent_InfoFabCategory_CatID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabCatContent_InfoFabCategory_CID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabCatContent_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabCatContent_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabRoleAuth_InfoFabCatContent_CCID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabUserAuth_InfoFabCatContent_CCID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabCategory_InfoFabCategory_PID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabCategory_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabCategory_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabClass_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabClass_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProjectClass_InfoFabClass_ClassID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_Customer_InfoFabCode_CapitalCurrency" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_Customer_InfoFabCode_CustomerStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerBusinessPartner_InfoFabCode_PartnerType" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerBusinessType_InfoFabCode_BusinessType" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerBusinessType_InfoFabCode_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerContactOwner_InfoFabCode_ContactMethod" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerContactPerson_InfoFabCode_ContactDeptNo" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerContactPerson_InfoFabCode_ContactRole" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerCreditLimit_InfoFabCode_CreditGrade" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerCreditLimit_InfoFabCode_CreditLimitStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerCreditLimit_InfoFabCode_CreditType" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerCreditLimit_InfoFabCode_PaymentMethod" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerCreditLimit_InfoFabCode_PaymentTerm" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerMonthlySalesAmount_InfoFabCode_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerOutsourceAmount_InfoFabCode_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerProductType_InfoFabCode_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerSalesAmount_InfoFabCode_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerSalesProductType_InfoFabCode_Currency" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerSite_InfoFabCode_CustomerSiteStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabCode_InfoFabType_TypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabCode_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabCode_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabContent_InfoFabCode_ContentStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabContent_InfoFabCode_FileType" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabContent_InfoFabCode_PrgType" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpDeputy_InfoFabCode_DeputyType" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpLeave_InfoFabCode_LeaveDeputyType" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmployee_InfoFabCode_JobKindID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmployee_InfoFabCode_PayType" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmployee_InfoFabCode_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmployee_InfoFabCode_WageRank" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpOrg_InfoFabCode_OrgType" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpOvertime_InfoFabCode_OTPayType" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpSkillClass_InfoFabCode_ChargeType" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpSkillClass_InfoFabCode_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpTaskDailyRecord_InfoFabCode_ApproveStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpTaskDailyRecord_InfoFabCode_Frequency" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpTaskDailyRecord_InfoFabCode_OTReason" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabLangMapping_InfoFabCode_LangID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabMessage_InfoFabCode_Format" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabOffDay_InfoFabCode_OffDayType" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabOrganization_InfoFabCode_OrgLevel" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabPayPeriod_InfoFabCode_PayType" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabPersonal_InfoFabCode_Education" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProCert_InfoFabCode_DegreeTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProject_InfoFabCode_ProjectStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabRole_InfoFabCode_RoleType" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTask_InfoFabCode_TaskStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskProcedure_InfoFabCode_ProcedureStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskProject_InfoFabCode_ProjectStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskProject_InfoFabCode_ProjectType" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskPropertyTemplate_InfoFabCode_PropControlType" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabUser_InfoFabCode_LangID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabUser_InfoFabCode_UserType" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWFProjectTest_InfoFabCode_OwnerFlowType" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFEmpTaskDailyRecord_InfoFabCode_ApproveStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFEmpTaskDailyRecord_InfoFabCode_Frequency" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFEmpTaskDailyRecord_InfoFabCode_OTReason" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFEmpTaskDailyRecord_InfoFabCode_ReasonCode" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFTask_InfoFabCode_TaskStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabColumns_InfoFabTables_TableID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabColumns_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabColumns_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabColumns_InfoFabColumnsSetting_TableID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabColumnsSetting_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabColumnsSetting_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabContent_InfoFabCode_FunctionSet" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabContent_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabContent_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabContent_InfoFabUser_Owner" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTables_InfoFabContent_CID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerSite_InfoFabDistrict_DistrictID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabDistrict_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabDistrict_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpDeputy_InfoFabEmpOrg_DeputyEmpOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpDeputy_InfoFabEmpOrg_EmpOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpDeputy_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpDeputy_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmployee_InfoFabPersonal_PersonalID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmployee_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmployee_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpOrg_InfoFabEmployee_EmpID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpSkill_InfoFabEmployee_EmpID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFEmpProcedure_InfoFabEmployee_EmpID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFEmpTaskDailyDisplay_InfoFabEmployee_EmpID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFEmpTaskDailyRecord_InfoFabEmployee_EmpID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpLeave_InfoFabEmpOrg_DeputyEmpOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpLeave_InfoFabEmpOrg_EmpOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpOrg_InfoFabOrganization_OrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpOrg_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpOrg_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpOrg_InfoFabWorkGroup_WorkGroupID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpOvertime_InfoFabEmpOrg_EmpOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpProcEff_InfoFabEmpOrg_EmpOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpTaskAssign_InfoFabEmpOrg_EmpOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabOrganization_InfoFabEmpOrg_LeaderEmpOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTask_InfoFabEmpOrg_Owner" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskProcedure_InfoFabEmpOrg_Owner" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskProject_InfoFabEmpOrg_PMEmpOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWFProjectTest_InfoFabEmpOrg_ApplicantEmpOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFTask_InfoFabEmpOrg_Owner" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFTaskCalItem_InfoFabEmpOrg_EmpOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpProCert_InfoFabPersonal_PersonID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpProCert_InfoFabProCert_CertID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpProCert_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpProCert_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabENV_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabENV_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabENVItem_InfoFabENV_ENVID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabENVItem_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabENVItem_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabForgotPWD_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabForgotPWD_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabLangMapping_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabLangMapping_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabMessage_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabMessage_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabMessageContent_InfoFabMessage" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabMessageContent_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabMessageContent_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabNotify_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabNotify_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabNotify_InfoFabUser_UID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabOrganization_InfoFabOrganization_PID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabOrganization_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabOrganization_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabOrgEnv_InfoFabOrganization_CostOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabOrgEnv_InfoFabOrganization_DeptOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabOrgEnv_InfoFabOrganization_PlanOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabOrgEnv_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabOrgEnv_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabPersonal_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabPersonal_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProCert_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProCert_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProCertSkill_InfoFabCode_CertID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProject_InfoFabProjectNode_NodeID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProject_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProject_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProject_InfoFabUser_Supervisor" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProjectAttendee_InfoFabProject_ProjectID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProjectClass_InfoFabProject_ProjectID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProjectAttendee_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProjectAttendee_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProjectAttendee_InfoFabUser_UserID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProjectClass_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProjectClass_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProjectNode_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProjectNode_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabRole_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabRole_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabRoleAuth_InfoFabRole_RoleID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabRoleUser_InfoFabRole_RID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabRoleAuth_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabRoleAuth_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabRoleUser_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabRoleUser_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabRoleUser_InfoFabUser_UID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTables_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTables_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabType_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabType_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_Customer_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_Customer_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerBusinessPartner_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerBusinessPartner_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerBusinessType_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerBusinessType_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerContactOwner_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerContactOwner_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerContactPerson_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerContactPerson_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerCreditLimit_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerCreditLimit_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerDelayPayment_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerDelayPayment_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerMonthlySalesAmount_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerMonthlySalesAmount_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerOutsourceAmount_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerOutsourceAmount_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerProductType_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerProductType_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerSalesAmount_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerSalesAmount_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerSalesProductType_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerSalesProductType_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerSite_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerSite_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_DistributionChannel_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_DistributionChannel_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpLeave_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpLeave_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpLeaveDay_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpLeaveDay_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpOvertime_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpOvertime_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpProcEff_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpProcEff_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpSkill_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpSkill_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpSkillClass_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpSkillClass_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpTaskAssign_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpTaskAssign_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpTaskDailyRecord_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpTaskDailyRecord_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabLeaveCode_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabLeaveCode_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabOffDay_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabOffDay_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabOvertimeCode_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabOvertimeCode_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabPayControl_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabPayControl_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabPayPeriod_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabPayPeriod_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProcedure_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProcedure_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProCertSkill_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProCertSkill_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabSkill_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabSkill_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabSkillType_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabSkillType_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTask_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTask_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskDetail_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskDetail_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskEnv_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskEnv_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskKind_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskKind_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskProcedure_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskProcedure_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskProject_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskProject_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskProperty_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskProperty_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskPropertyTemplate_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskPropertyTemplate_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabUser_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabUser_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabUserAuth_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabUserAuth_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabUserAuth_InfoFabUser_UserID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWFForms_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWFForms_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWFProjectTest_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWFProjectTest_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWFProjectTestHistory_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWFProjectTestHistory_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWFScheme_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWFScheme_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWFSchemeHistory_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWFSchemeHistory_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWorkCode_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWorkCode_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWorkGroup_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWorkGroup_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWorkPattern_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWorkPattern_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFEmpProcedure_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFEmpProcedure_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFEmpTaskDailyDisplay_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFEmpTaskDailyDisplay_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFEmpTaskDailyRecord_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFEmpTaskDailyRecord_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFProcedure_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFProcedure_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFTask_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFTask_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFTaskCal_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFTaskCal_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFTaskCalItem_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFTaskCalItem_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartClass_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartClass_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartLovCode_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartLovCode_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartLovKind_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartLovKind_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartLovType_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartLovType_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartSerialNumberRule_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartSerialNumberRule_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartType_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartType_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartTypeClass_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartTypeClass_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartTypeMaterialModel_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartTypeMaterialModel_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartTypeSerialNo_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartTypeSerialNo_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_SalesArea_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_SalesArea_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_SalesOrganization_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_SalesOrganization_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWFProjectTestHistory_InfoFabWFProjectTest_ProjectID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWFSchemeHistory_InfoFabWFScheme_SchemeID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CartItems_Carts_CartID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CartItems_Products_ProductID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_RefProductCatalog_Catalogs_CatalogID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_RefProductCatalog_Products_ProductID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerBusinessPartner_Customer_CustomerID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerBusinessType_Customer_CustomerID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerContactOwner_Customer_CustomerID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerContactPerson_Customer_CustomerID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerCreditLimit_Customer_CustomerID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerDelayPayment_Customer_CustomerID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerMonthlySalesAmount_Customer_CustomerID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerOutsourceAmount_Customer_CustomerID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerProductType_Customer_CustomerID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerSalesAmount_Customer_CustomerID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerSalesProductType_Customer_CustomerID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerSite_Customer_CustomerID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_CustomerContactPerson_CustomerSite_CustomerSiteID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartClass_PartType_PartTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartLovCode_PartType_TypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartTypeClass_PartLovKind_LovKindID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartTypeSerialNo_PartSerialNoRule_SerialNoID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartTypeClass_PartType_PartTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartTypeMaterialModel_PartType_PartTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_PartTypeSerialNo_PartType_PartTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpLeave_InfoFabLeaveCode_LeaveCodeID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpLeave_InfoFabWorkCode_WorkCodeID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpLeaveDay_InfoFabEmpLeave_LeaveID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpLeaveDay_InfoFabWorkCode_WorkCodeID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpOvertime_InfoFabEmpLeave_OTCodeID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpOvertime_InfoFabWorkCode_WorkCodeID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpProcEff_InfoFabProcedure_ProcedureID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpProcEff_InfoFabTaskKind_TaskKindID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpSkill_InfoFabSkill_SkillID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpSkillClass_InfoFabEmpSkill_EmpSkillID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpTaskAssign_InfoFabTask_TaskID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpTaskAssign_InfoFabTaskProcedure_TaskProcID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpTaskDailyRecord_InfoFabEmpTaskAssign_ETAID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabEmpTaskDailyRecord_InfoFabWorkCode_WorkCodeID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabLeaveCode_InfoFabLeaveCode_DependOn" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabPayControl_InfoFabPayControl_PPID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProcedure_InfoFabProcedure_PID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskProcedure_InfoFabProcedure_ProcedureID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabProCertSkill_InfoFabSkillType_SkillTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabSkill_InfoFabSkillType_SkillTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskProcedure_InfoFabSkill_SkillID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTask_InfoFabSkillType_SkillTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFTask_InfoFabSkillType_SkillTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTask_InfoFabTaskKind_KindID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTask_InfoFabTaskProject_ProjectID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskDetail_InfoFabTask_TaskID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskProcedure_InfoFabTask_TaskID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskProperty_InfoFabTask_TaskID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskKind_InfoFabTaskKind_PID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskProcedure_InfoFabTaskProcedure_PrevID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabTaskProperty_InfoFabTaskPropTemplate_PropTemplateID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWorkPattern_InfoFabWorkCode_WCID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFEmpTaskDailyRecord_InfoFabWorkCode_WorkCodeID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_InfoFabWorkPattern_InfoFabWorkGroup_WGID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFEmpProcedure_JJMFProcedure_JJMFProcID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFEmpProcedure_JJMFTask_JJMFTaskID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFEmpTaskDailyDisplay_JJMFProcedure_JJMFProcID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFEmpTaskDailyDisplay_JJMFTask_JJMFTaskID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFEmpTaskDailyRecord_JJMFProcedure_JJMFProcID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFEmpTaskDailyRecord_JJMFTask_JJMFTaskID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFProcedure_JJMFProcedure_PID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFTaskCal_JJMFProcedure_JJMFProcID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFTaskCal_JJMFTask_JJMFTaskID" ManuallyRouted="false" />
+        <AssociationConnector Association="iKGDBModel.FK_JJMFTaskCalItem_JJMFTaskCal_JJMFTaskCalID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

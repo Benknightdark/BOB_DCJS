@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = "~/Views/_template.cshtml";
+}
+@model Demo0805.Models.book
+
+@using (Html.BeginForm())
+{
+
+    @Html.ValidationSummary(true)
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        @Html.LabelFor(model => model.bookname)
+        @Html.EditorFor(model => model.bookname)
+        @Html.ValidationMessageFor(model => model.bookname)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.author)
+        @Html.EditorFor(model => (model.author))
+        @Html.ValidationMessageFor(model => model.author)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.publisher)
+        @Html.EditorFor(model => model.publisher)
+        @Html.ValidationMessageFor(model => model.publisher)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.price)
+        @Html.EditorFor(model => model.price)
+        @Html.ValidationMessageFor(model => model.price)
+    </div>
+
+    <div class="form-group">
+        <input id="Submit" type="submit" value="新增" />
+        @Html.ActionLink("回上一頁", "Index")
+    </div>
+
+}
+
+

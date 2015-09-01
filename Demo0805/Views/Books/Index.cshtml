@@ -1,0 +1,40 @@
+﻿
+@{
+  
+    Layout = "~/Views/_template.cshtml";
+}
+@model IEnumerable<Demo0805.Models.book>
+<div class="form-group">
+    <div class="table">
+        <table class="table table-bordered table-hover">
+            <tr class="success">
+
+                <th> @Html.DisplayNameFor(model => model.id) </th>
+                <th> @Html.DisplayNameFor(model => model.bookname) </th>
+                <th> @Html.DisplayNameFor(model => model.author) </th>
+                <th> @Html.DisplayNameFor(model => model.publisher)  </th>
+                <th> @Html.DisplayNameFor(model => model.price)  </th>
+                <th> 修改功能 </th>
+                <th> 刪除功能 </th>
+                <th> 明細</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>   @Html.DisplayFor(modelItem => item.id)   </td>
+                    <td>   @Html.DisplayFor(modelItem => item.bookname) </td>
+                    <td>  @Html.DisplayFor(modelItem => item.author) </td>
+                    <td>   @Html.DisplayFor(modelItem => item.publisher) </td>
+                    <td>   @Html.DisplayFor(modelItem => item.price) </td>
+                    <td>  @Html.ActionLink("修改", "Edit", new { id = item.id }, new { @class = "btn btn-primary glyphicon glyphicon-th-list" })</td>
+                    <td>  @Html.ActionLink("刪除", "Delete", new { id = item.id }, new { @class = "btn btn-danger glyphicon glyphicon-remove-sign" })</td>
+                    <td>  @Html.ActionLink("明細", "Detail", new { id = item.id }, new { @class = "btn btn-success glyphicon glyphicon-th-list" })</td>
+                </tr>
+
+            }
+        </table>
+    </div>
+    <a href="/Books/Create" class="btn btn-primary btn-lg active glyphicon glyphicon-plus-sign" role="button">Create</a>
+</div>
+
