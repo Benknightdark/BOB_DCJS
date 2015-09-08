@@ -156,11 +156,11 @@ Please consider that the JS part isn't production ready at all, I just code it t
 
     function LoadDataDC(dataset) {
         var data = crossfilter(dataset);
-        var name = data.dimension(function (d) { return [d.name]; });
+        var name = data.dimension(function (d) { return d.name; });
         var namegroup = name.group().reduceCount();
-        var city = data.dimension(function (d) { return [d.city]; });
+        var city = data.dimension(function (d) { return d.city; });
         var citygroup = city.group().reduceCount();
-        var rank = data.dimension(function (d) { return [d.rank]; });
+        var rank = data.dimension(function (d) { return d.rank; });
         var rankgroup = rank.group();
 
         dc.pieChart("#donut-city-chart")
