@@ -194,24 +194,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\CultureHelper.cs" />
-    <Compile Include="Models\Address.cs">
-      <DependentUpon>Advanture2012.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Advanture2012.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Advanture2012.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Advanture2012.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Advanture2012.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Advanture2012.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Advanture2012.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\birthdate_books.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
@@ -238,65 +220,8 @@
     <Compile Include="Models\bookstore.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\BuildVersion.cs">
-      <DependentUpon>Advanture2012.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Cart.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CartItem.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Catalog.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\CD音樂.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Customer.cs">
-      <DependentUpon>Advanture2012.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CustomerAddress.cs">
-      <DependentUpon>Advanture2012.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CustomerBusinessPartner.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CustomerBusinessType.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CustomerContactOwner.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CustomerContactPerson.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CustomerCreditLimit.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CustomerDelayPayment.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CustomerMonthlySalesAmount.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CustomerOutsourceAmount.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CustomerProductType.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CustomerSalesAmount.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CustomerSalesProductType.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CustomerSite.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\C__RefactorLog.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\d3js.cs" />
     <Compile Include="Models\date_orders.cs">
@@ -305,268 +230,13 @@
     <Compile Include="Models\Department.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DistributionChannel.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Employee.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ErrorLog.cs">
-      <DependentUpon>Advanture2012.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EventLog.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\iKGDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>iKGDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\iKGDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\iKGDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>iKGDB.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabAnnualLeave.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabAnnualLeaveCondition.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabArea.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabAttnEnv.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabCatContent.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabCategory.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabClass.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabCode.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabColumn.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabColumnsSetting.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabContent.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabDistrict.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabEmpDeputy.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabEmpLeave.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabEmpLeaveDay.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabEmployee.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabEmpOrg.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabEmpOvertime.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabEmpProcEff.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabEmpProCert.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabEmpSkill.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabEmpSkillClass.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabEmpTaskAssign.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabEmpTaskDailyRecord.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabENV.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabENVItem.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabForgotPWD.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabLangMapping.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabLeaveCode.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabMessage.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabMessageContent.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabNotify.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabOffDay.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabOrganization.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabOrgEnv.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabOvertimeCode.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabPayControl.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabPayPeriod.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabPersonal.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabProcedure.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabProCert.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabProCertSkill.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabProject.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabProjectAttendee.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabProjectClass.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabProjectNode.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabRole.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabRoleAuth.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabRoleUser.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabSkill.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabSkillType.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabTable.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabTask.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabTaskDetail.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabTaskEnv.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabTaskKind.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabTaskProcedure.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabTaskProject.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabTaskProperty.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabTaskPropTemplate.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabType.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabUser.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabUserAuth.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabWFForm.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabWFProjectTest.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabWFProjectTestHistory.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabWFScheme.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabWFSchemeHistory.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabWorkCode.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabWorkGroup.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InfoFabWorkPattern.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\JJMFEmpProcedure.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\JJMFEmpTaskDailyDisplay.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\JJMFEmpTaskDailyRecord.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\JJMFProcedure.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\JJMFTask.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\JJMFTaskCal.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\JJMFTaskCalItem.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Log.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
@@ -592,48 +262,6 @@
     <Compile Include="Models\order.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\PartClass.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PartLovCode.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PartLovKind.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PartLovType.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PartSerialNoRule.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PartType.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PartTypeClass.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PartTypeMaterialModel.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PartTypeSerialNo.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Product.cs">
-      <DependentUpon>Advanture2012.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ProductCategory.cs">
-      <DependentUpon>Advanture2012.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ProductDescription.cs">
-      <DependentUpon>Advanture2012.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ProductModel.cs">
-      <DependentUpon>Advanture2012.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ProductModelProductDescription.cs">
-      <DependentUpon>Advanture2012.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Product_Name.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
@@ -643,29 +271,11 @@
     <Compile Include="Models\PV.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\RefProductCatalog.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Sale.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\SalesArea.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\SalesManager.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\SalesOrderDetail.cs">
-      <DependentUpon>Advanture2012.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\SalesOrderHeader.cs">
-      <DependentUpon>Advanture2012.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\SalesOrganization.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\SampleDataTable.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Schedule.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
@@ -681,36 +291,6 @@
     </Compile>
     <Compile Include="Models\Trip.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\WorkflowGlobalParameter.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\WorkflowInbox.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\WorkflowProcessInstance.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\WorkflowProcessInstancePersistence.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\WorkflowProcessInstanceStatu.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\WorkflowProcessScheme.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\WorkflowProcessTimer.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\WorkflowProcessTransitionHistory.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\WorkflowRuntime.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\WorkflowScheme.cs">
-      <DependentUpon>iKGDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\XMLBook.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
@@ -867,23 +447,6 @@
     <Content Include="CodeTemplates\ApiControllerWithActions\Controller.cs.t4" />
     <Content Include="CodeTemplates\ApiControllerEmpty\Controller.vb.t4" />
     <Content Include="CodeTemplates\ApiControllerEmpty\Controller.cs.t4" />
-    <EntityDeploy Include="Models\iKGDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>iKGDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\iKGDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>iKGDB.edmx</DependentUpon>
-      <LastGenOutput>iKGDB.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\iKGDB.edmx.diagram">
-      <DependentUpon>iKGDB.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\iKGDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>iKGDB.edmx</DependentUpon>
-      <LastGenOutput>iKGDB.cs</LastGenOutput>
-    </Content>
     <EntityDeploy Include="Models\BOBModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>BOBModel.Designer.cs</LastGenOutput>
@@ -906,23 +469,6 @@
     <Content Include="Scripts\CrossFilter\README.md" />
     <Content Include="Scripts\CrossFilter\LICENSE" />
     <Content Include="Scripts\DC\dc.min.js.map" />
-    <EntityDeploy Include="Models\Advanture2012.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Advanture2012.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Advanture2012.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Advanture2012.edmx</DependentUpon>
-      <LastGenOutput>Advanture2012.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\Advanture2012.edmx.diagram">
-      <DependentUpon>Advanture2012.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\Advanture2012.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Advanture2012.edmx</DependentUpon>
-      <LastGenOutput>Advanture2012.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
@@ -1708,6 +1254,7 @@
     <Content Include="Views\Orders\BookSelected.cshtml" />
     <Content Include="Views\Orders\Edit.cshtml" />
     <Content Include="Views\Orders\Delete.cshtml" />
+    <Content Include="Views\d3js\Treemap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

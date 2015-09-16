@@ -10,7 +10,10 @@ namespace Demo0805.Controllers
     public class d3jsController : BaseController
     {
       private   BOBEntities db = new BOBEntities();
-        
+      public ActionResult Treemap()
+      {
+          return View();
+      }
         //
         // GET: /d3js/
         [HttpPost]

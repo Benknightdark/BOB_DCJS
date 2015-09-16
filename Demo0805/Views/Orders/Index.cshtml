@@ -53,7 +53,7 @@
     <li class="active"><a data-toggle="tab" href="#home">書籍存貨表</a></li>
     <li><a data-toggle="tab" href="#menu1">篩選查詢</a></li>
     <li><a data-toggle="tab" href="#menu2">新增存貨</a></li>
-    <li><a data-toggle="tab" href="#menu3">資料視覺化</a></li>
+    <li><a data-toggle="tab" href="#menu3">DC.js多維度儀表版</a></li>  
 </ul>
 
 <div class="tab-content">
@@ -167,6 +167,12 @@
                 <h3><span class="label label-success">書籍總存貨維度圓餅圖</span></h3>
             </div>
         </div>
+        <div id="chart-line-hitsperday">
+            <div class="input-group">
+                <h3><span class="label label-success">歷史圖</span></h3>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-xs-12">
                 <ul class="nav nav-tabs">
@@ -376,6 +382,37 @@
         var QuantityByBookstore = Bookstore.group().reduceSum(function (d) {
             return d.quantity;
         });
+        
+
+        var QuantityByBookstore_a = Bookstore.group().reduceSum(function (d) {
+            if (d.name == "天秤書局") {
+                return d.quantity;
+            } else {
+                return 0;
+            }
+            
+        });
+        var QuantityByBookstore_b = Bookstore.group().reduceSum(function (d) {
+            if (d.name == "獅子書局") {
+                return d.quantity;
+            } else {
+                return 0;
+            }
+        });
+        var QuantityByBookstore_c = Bookstore.group().reduceSum(function (d) {
+            if (d.name == "巨蟹書局") {
+                return d.quantity;
+            } else {
+                return 0;
+            }
+        });
+        var QuantityByBookstore_d = Bookstore.group().reduceSum(function (d) {
+            if (d.name == "射手書局") {
+                return d.quantity;
+            } else {
+                return 0;
+            }
+        });
         //書籍維度的存貨數量
         var QuantityByBook = Book.group().reduceSum(function (d) {
             return d.quantity;
@@ -419,7 +456,9 @@
         BookStorePieChart();
         BookPieChart();
         QuantityLineChart();
+        stacked();
         Tables();
+
         //#region 圖表輸出
         function BookBarChart() {
             /////////////////////////////////////////書籍維度長條圖///////////////////////////////////
@@ -494,7 +533,7 @@
                 .margins({ top: 10, right: 50, bottom: 30, left: 40 })//加入margins的CSS
                 .dimension(Bookstore)//加入書局的維度資料
                 .group(QuantityByBookstore)//加入書局維度的存貨數量
-
+               
                  .title(function (d) { return " \書籍數量: " + d.data.value; })//當移動到長條圖時，會以前綴資訊秀出書籍數量
                 .x(d3.scale.ordinal().domain(BookStoreDomain))//x軸是以序數尺度呈現，其domain會呼叫
                                                                                                              //BookStoreDomain所回傳的書局名稱陣列
@@ -622,15 +661,14 @@
             window.BookStorePieChart
            .width(500)
             .height(300)
-            .slicesCap(10)
-            .innerRadius(80)
+            .slicesCap(10)//圓餅圖的切片數量
+            .innerRadius(80)//圓中心的空心圓半徑大小
            .dimension(Bookstore)
             .group(QuantityByBookstore)
-            .renderLabel(true)
-            .label(function (d) {
+            .renderLabel(true)//是否回傳資料標籤
+            .label(function (d) {//回傳資料的key值和value值
                 return (d.data.key + " : " + d.data.value);
-            })
-            ;
+            });          
         };
         function BookPieChart() {
             window.BookPieChart = dc.pieChart("#BookPieChart");
@@ -651,15 +689,32 @@
             window.QuantityLineChart
             .height(200)
                 .width(300)
-        .x(d3.scale.linear().domain([d3.min(dataset, function (d) { return d.quantity; }) + 2, d3.max(dataset, function (d) { return d.quantity; }) + 2]))
-         .interpolate('step-before')
-            .renderArea(true)
-            .brushOn(true)
-           
-             .clipPadding(10)
-            .yAxisLabel("This is the Y Axis!")
+        .x(d3.scale.linear().domain([d3.min(dataset, function (d) { return d.quantity; })
+            + 2, d3.max(dataset, function (d) { return d.quantity; }) + 2]))
+         .interpolate('step-before')//將折線圖裡線的分佈方式以水平和垂直方式呈現
+            .renderArea(true)//是否啟用區塊顏色
+            .brushOn(true)   // 是否啟用過濾功能        
+            .xAxisLabel('總存貨數量')
+           .yAxisLabel('總數')
             .dimension(Quantity)
             .group(QuantityGroup);
+        };
+        function stacked() {
+            window.barChart = dc.barChart("#chart-line-hitsperday");
+            window.barChart
+            .width(1000).height(200)
+	.dimension(Book)
+                            .x(d3.scale.ordinal().domain(BookDomain))//x軸是以序數尺度呈現，其domain會呼叫BookDomain所回傳的書籍名稱陣列
+
+        .group(QuantityByBookstore_a, "天秤書局")
+        .stack(QuantityByBookstore_b, "獅子書局")
+        .stack(QuantityByBookstore_c, "巨蟹書局")
+        .stack(QuantityByBookstore_d, "射手書局")
+       
+      
+        .legend(dc.legend().x(60).y(10).itemHeight(13).gap(5))
+	.yAxisLabel("Hits per day")
+            ;
         };
         //#endregion
         //#region 表格輸出
@@ -673,8 +728,8 @@
                  function (d) { return d.publisher; },
                 function (d) { return d.bookname; },
                function (d) { return d.quantity; },
-               function (d) { return "<a href=Orders/Edit/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Edit" + "</a>"; },
-                  function (d) { return "<a href=Orders/Delete/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Delete" + "</a>"; }
+               function (d) { return "<a href=Edit/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Edit" + "</a>"; },
+                  function (d) { return "<a href=Delete/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Delete" + "</a>"; }
             ])
                 .renderlet(function (d) { return console.log(d); })
                 .sortBy(function (d) { return d.quantity; })
@@ -688,8 +743,8 @@
            function (d) { return d.publisher; },
          function (d) { return d.name; },
          function (d) { return d.quantity; },
-         function (d) { return "<a href=Orders/Edit/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Edit" + "</a>"; },
-         function (d) { return "<a href=Orders/Delete/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Delete" + "</a>"; }
+         function (d) { return "<a href=Edit/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Edit" + "</a>"; },
+         function (d) { return "<a href=Delete/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Delete" + "</a>"; }
        ])
     .sortBy(function (d) { return d.quantity; })
     .order(dc.descending);
@@ -703,8 +758,8 @@
          function (d) { return d.name; },
          function (d) { return d.bookname; },
          function (d) { return d.quantity; },
-         function (d) { return "<a href=Orders/Edit/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Edit" + "</a>"; },
-         function (d) { return "<a href=Orders/Delete/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Delete" + "</a>"; }
+         function (d) { return "<a href=Edit/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Edit" + "</a>"; },
+         function (d) { return "<a href=Delete/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Delete" + "</a>"; }
        ])
     .sortBy(function (d) { return d.quantity; })
     .order(dc.descending);
@@ -717,8 +772,8 @@
          function (d) { return d.name; },
          function (d) { return d.bookname; },
          function (d) { return d.quantity; },
-         function (d) { return "<a href=Orders/Edit/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Edit" + "</a>"; },
-         function (d) { return "<a href=Orders/Delete/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Delete" + "</a>"; }
+         function (d) { return "<a href=Edit/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Edit" + "</a>"; },
+         function (d) { return "<a href=Delete/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Delete" + "</a>"; }
        ])
     .sortBy(function (d) { return d.quantity; })
     .order(dc.descending);
