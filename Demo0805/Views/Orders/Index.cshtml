@@ -731,9 +731,9 @@
                function (d) { return "<a href=Edit/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Edit" + "</a>"; },
                   function (d) { return "<a href=Delete/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Delete" + "</a>"; }
             ])
-                .renderlet(function (d) { return console.log(d); })
-                .sortBy(function (d) { return d.quantity; })
-                 .order(d3.descending);
+                .renderlet(function (d) { return console.log(d); });
+        
+               
             /*書籍維度表*/
             dataTable2 = dc.dataTable('#data-table2');
             dataTable2
@@ -745,9 +745,9 @@
          function (d) { return d.quantity; },
          function (d) { return "<a href=Edit/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Edit" + "</a>"; },
          function (d) { return "<a href=Delete/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Delete" + "</a>"; }
-       ])
-    .sortBy(function (d) { return d.quantity; })
-    .order(dc.descending);
+       ]);
+
+   
             /*總表*/
             dataTable3 = dc.dataTable('#data-table3');
             dataTable3
@@ -760,9 +760,9 @@
          function (d) { return d.quantity; },
          function (d) { return "<a href=Edit/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Edit" + "</a>"; },
          function (d) { return "<a href=Delete/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Delete" + "</a>"; }
-       ])
-    .sortBy(function (d) { return d.quantity; })
-    .order(dc.descending);
+       ]);
+
+   
             /*出版社維度表*/
             dataTable4 = dc.dataTable('#data-table4');
             dataTable4
@@ -774,9 +774,9 @@
          function (d) { return d.quantity; },
          function (d) { return "<a href=Edit/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Edit" + "</a>"; },
          function (d) { return "<a href=Delete/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Delete" + "</a>"; }
-       ])
-    .sortBy(function (d) { return d.quantity; })
-    .order(dc.descending);
+       ]);
+   
+   
         };
         //#endregion
 

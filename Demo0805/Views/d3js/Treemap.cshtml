@@ -3,6 +3,8 @@
     ViewBag.Title = "Treemap";
     Layout = "~/Views/_template.cshtml";
 }
+@model IEnumerable<Demo0805.Models.order>
+
 <style>
     body {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -26,10 +28,12 @@
         text-indent: 2px;
     }
 </style>
+
 <form>
     <label><input type="radio" name="mode" value="size" checked> Size</label>
     <label><input type="radio" name="mode" value="count"> Count</label>
 </form>
+
 
 <script>
 
@@ -54,25 +58,30 @@ var div = d3.select("body").append("div")
 d3.json("https://gist.githubusercontent.com/mbostock/1093025/raw/05621a578a66fba4d2cbf5a77e2d1bb3a27ac3d4/flare.json",
     function (error, root) {
   if (error) throw error;
-
+       
   var node = div.datum(root).selectAll(".node")
       .data(treemap.nodes)
     .enter().append("div")
       .attr("class", "node")
       .call(position)
-      .style("background", function(d) { return d.children ? color(d.name) : null; })
-      .text(function (d) { return d.children ? null : d.name; });//? null : d.name
-
+      .style("background", function(d) { return d.children ? color(d.name) :null ; })
+      .text(function (d) { return d.children ? null : d.name; });
+  console.log(node);
   d3.selectAll("input").on("change", function change() {
-    var value = this.value === "count"
-        ? function() { return 1; }
-        : function(d) { return d.size; };
-
+    var value = this.value === "count"//不作轉型
+        ? function() { return 1; }//0假,1真
+        : function (d) {
+            return d.size;
+            
+        };
+//遞移動畫
     node
         .data(treemap.value(value).nodes)
       .transition()
         .duration(1500)
         .call(position);
+
+    console.log(this.value);
   });
 });
 

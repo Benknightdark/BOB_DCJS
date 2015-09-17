@@ -11,11 +11,18 @@ namespace Demo0805.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class order
     {
-        public long no { get; set; }
-        public long id { get; set; }
+        [Required]
+        [Display(Name = "書店編號")]
+        public long? no { get; set; }
+        [Required]
+        [Display(Name = "書籍編號")]
+        public long? id { get; set; }
+        [Required]
+        [Display(Name = "書籍存貨數量")]
         public Nullable<int> quantity { get; set; }
     
         public virtual book book { get; set; }

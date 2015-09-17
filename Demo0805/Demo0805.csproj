@@ -236,6 +236,7 @@
     <Compile Include="Models\EventLog.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\extend.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Log.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
