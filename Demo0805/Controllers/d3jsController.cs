@@ -1,67 +1,24 @@
-﻿using System;
+﻿using Demo0805.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using Demo0805.Models;
-using Newtonsoft.Json.Linq;
+
 namespace Demo0805.Controllers
 {
     public class d3jsController : BaseController
     {
         private BOBEntities db = new BOBEntities();
+
         public ActionResult Treemap()
         {
-
-            var orders = db.orders;
             var bookstore = db.bookstores;
             var books = db.books;
-            var city_count = db.bookstores.Distinct().Select(a => a.city).ToList();
-            
-            #region test
-            //List<object> city = new List<object>();
-            //List<object> name = new List<object>();
-            //List<object> publisher = new List<object>();
-            //List<object> book = new List<object>();
-           
-            //foreach (var a in city_count)//root_name
-            //{
-            //    var bookstore_count = db.bookstores.Where(c => c.city == a).Select(b => b.name).ToList();
-               
-            //    foreach (var d in bookstore_count)//child1_name
-            //    {
-            //        name.Add(new   { name = d.Trim() });
-            //        //var publisher_count = db.orders.Where(c => c.bookstore.name == d).Select(b => b.book.publisher).ToList();
-            //       // foreach (var e in publisher_count)//child2_name
-            //       // {                     
-            //       //     publisher.Add(new { name = e.Trim() });
-            //       //     var book_count = db.orders.Where(c => c.book.publisher == e).Select(b => new { b.book.bookname, b.quantity }).ToList();
-            //       //     book.Clear();
-            //       //     //foreach (var f in book_count)///leaf
-            //       //     //{
-            //       //     //    //book.Add(new { name = f.bookname, size = f.quantity });
-                            
-            //       //     //}
-            //       ////     publisher.AddRange(book);
-            //       //   //  book.Clear();
-                      
-            //       // }
-            //    }
-
-            //    city.Add(new { name = a.Trim() });
-
-            //    //name.AddRange(publisher);
-            //    city.AddRange(name);
-            //    name.Clear();
-            //    //book.Clear();
-
-            //}
-
-            //ViewBag.list =JsonConvert.SerializeObject( city);
-            #endregion
+            var orders = db.orders;
 
             return View(orders.ToList());
         }
+
         //
         // GET: /d3js/
         [HttpPost]
@@ -71,6 +28,7 @@ namespace Demo0805.Controllers
                              select new d3js.BookstoresGraph { name = a.name, city = a.city, rank = a.rank };
             return Json(bookstores.ToList(), JsonRequestBehavior.AllowGet);
         }
+
         [HttpPost]
         public JsonResult Orders()
         {
@@ -81,16 +39,36 @@ namespace Demo0805.Controllers
                           select new BOBOrderList.OrderList { name = c.name.Trim(), bookname = b.bookname.Trim(), quantity = a.quantity, publisher = b.publisher, id = a.id, no = a.no });
             return Json(Orders.ToList(), JsonRequestBehavior.AllowGet);
         }
+
+        // [HttpPost]
+        public JsonResult TreeMapData()
+        {
+            var orders = db.orders;
+            List<Object> bigroot = new List<Object>();
+            List<Object> root = new List<Object>();
+            List<Object> child = new List<Object>();
+            var q = (from a in orders
+                     group a by a.bookstore.name into g
+                     select g
+                   );
+
+            foreach (var a in q)
+            {
+                foreach (order o in a)
+                {
+                    child.Add(new { name = o.book.bookname.Trim(), size = o.quantity });
+                }
+                root.Add(new { name = a.Key.Trim(), children = child.ToList() });
+                child.Clear();
+            }
+
+            bigroot.Add(new { name = "bob", children = root.ToList() });
+            return Json(bigroot, JsonRequestBehavior.AllowGet);
+        }
+
         public ActionResult Index()
         {
             return View();
         }
     }
-
-}
-
-public class TreeMap
-{
-    public string name { set; get; }//姓名
-    public List<object>  children { set; get; }//姓名
 }
