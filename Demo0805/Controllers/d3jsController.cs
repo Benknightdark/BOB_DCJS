@@ -18,6 +18,18 @@ namespace Demo0805.Controllers
 
             return View(orders.ToList());
         }
+        public ActionResult Tree()
+        {
+            return View();
+        }
+        public ActionResult Partion()
+        {
+            return View();
+        }
+        public ActionResult Pack()
+        {
+            return View();
+        }
 
         //
         // GET: /d3js/
@@ -41,7 +53,7 @@ namespace Demo0805.Controllers
         }
 
         // [HttpPost]
-        public JsonResult TreeMapData()
+        public JsonResult D3jsData()
         {
             var orders = db.orders;
             List<Object> bigroot = new List<Object>();
@@ -56,12 +68,16 @@ namespace Demo0805.Controllers
             {
                 foreach (order o in a)
                 {
-                    child.Add(new { name = o.book.bookname.Trim(), size = o.quantity });
+                    child.Add(new { name = o.book.bookname.Trim(), size = o.quantity,
+                        city=o.bookstore.city,publisher=o.book.publisher,author=o.book.author ,
+                        bookid=o.book.id,bookstoreno=o.bookstore.no
+                    });
                 }
                 root.Add(new { name = a.Key.Trim(), children = child.ToList() });
                 child.Clear();
             }
 
+          
             bigroot.Add(new { name = "bob", children = root.ToList() });
             return Json(bigroot, JsonRequestBehavior.AllowGet);
         }

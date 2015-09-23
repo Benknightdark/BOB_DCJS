@@ -1,0 +1,170 @@
+﻿@{
+    ViewBag.Title = "Cluster";
+    Layout = "~/Views/_template.cshtml";
+}
+
+<style>
+    .node {
+        cursor: pointer;
+    }
+
+        .node circle {
+            fill: #fff;
+            stroke: steelblue;
+            stroke-width: 1.5px;
+        }
+
+        .node text {
+            font: 10px sans-serif;
+        }
+
+    .link {
+        fill: none;
+        stroke: #ccc;
+        stroke-width: 1.5px;
+    }
+</style>
+
+<script>
+    var margin = { top: 20, right: 120, bottom: 20, left: 120 },// { top: 20, right: 120, bottom: 20, left: 120 }
+width = 3000 - margin.right - margin.left,
+height = 1500 - margin.top - margin.bottom;
+
+    var i = 0,//node編號
+        duration = 750,//遞移時間
+        root; 
+    //建立斜線和其 x, y 座標
+    var diagonal = d3.svg.diagonal()
+    .projection(function (d) { return [d.x, d.y]; });
+
+    var tree = d3.layout.tree().size([height, width]);
+
+    var svg = d3.select("body").append("svg")
+             .attr("width", width + margin.right + margin.left)
+             .attr("height", height + margin.top + margin.bottom)
+           .append("g")
+             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    d3.json("/d3js/D3jsData", function (error, data) {
+        if (error) throw error;
+        root = data[0];
+        root.x0 = height / 2;
+        root.y0 = 0;
+
+        function collapse(d) {
+            /*如果書局有書籍的資料時則將這些資料存入暫存的_children中*/
+            if (d.children) {
+                d._children = d.children;
+                d._children.forEach(collapse);
+                /*隱藏所有書局的子結點資料*/
+                d.children = null;
+            }
+        }
+        /*收合root的子結點底下的所有子結點*/
+        root.children.forEach(collapse);
+
+        update(root);
+    });
+
+
+    function update(source) {
+        // 建立樹的點和連結
+        var nodes = tree.nodes(root).reverse(),
+            links = tree.links(nodes);
+
+
+        // 將樹每個點的深度調高一點，避免每個點的間距過寬
+        nodes.forEach(function (d) { d.y = d.depth * 180; });//180
+
+        // 加入node class和其node的編號
+        var node = svg.selectAll("g.node")
+            .data(nodes, function (d) { return d.id || (d.id = ++i); });
+
+        // 當畫面剛 出現時，將root底下的node呈現
+        var nodeEnter = node.enter().append("g")
+            .attr("class", "node")
+            .attr("transform", function (d) {
+                return "translate(" + d.x + "," + d.y + ")";
+            })
+            //點擊觸發node收合及展開函式
+            .on("click", click);
+        //將node加入circle元素屬性，當d._children不是null時，則為淡籃色否則為白色
+        nodeEnter.append("circle")
+            .attr("r", 30)
+            .style("fill", function (d) { return d._children ? "lightsteelblue" : "#fff"; });
+        //將node加入文字元素屬性
+        nodeEnter.append("text")
+            .attr("y", function (d) { return d.children || d._children ? 10 : 30; })
+            .attr("x", function (d) { return d.children || d._children ? 1 : -25; })
+            .text(function (d) { return d.name + (d.size == null ? "" : ":" + d.size + "本"); })
+            .style("fill-opacity", 1e-6);
+
+        // node出現時的遞移動畫
+        var nodeUpdate = node.transition()
+            .duration(duration)
+            .attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
+
+        nodeUpdate.select("circle")
+            .attr("r", 20)
+            .style("fill", function (d) { return d._children ? "lightsteelblue" : "#fff"; });
+
+        nodeUpdate.select("text")
+            .style("fill-opacity", 1);
+        // 結束node出現時的遞移動畫
+
+        // node消失時的遞移動畫
+        var nodeExit = node.exit().transition()
+            .duration(duration)
+            .remove();
+        nodeExit.select("circle")
+            .attr("r", 100);
+        nodeExit.select("text")
+            .style("fill-opacity", 1e-6);
+        // 結束node消失時的遞移動畫
+
+        // 加入path.link class和root要連接到的node的編號
+        var link = svg.selectAll("path.link")
+            .data(links, function (d) { return d.target.id; });
+
+        // 加入link的xy座標
+        link.enter().insert("path", "g")
+            .attr("class", "link")
+        .attr("d", diagonal);
+
+        // link出現時的遞移動畫
+        link.transition()
+            .duration(duration)
+            .attr("d", diagonal);
+
+        // link結束時的遞移動畫
+        link.exit().transition()
+            .duration(duration)
+            .remove();
+
+        // node收合及展開函式
+        //d.children：已展開的點集合
+        //d._children：已收合的點集合
+        function click(d) {
+            if (d.children) {
+                console.log("未收合");
+                d._children = d.children;
+                d.children = null;
+                console.log("收合");
+            } else {
+                var exd = d;
+                console.log("未展開");
+                d.children = d._children;
+                d._children = null;
+                console.log("展開");
+            }
+            update(d);
+        }
+    }
+
+
+
+
+
+
+
+</script>

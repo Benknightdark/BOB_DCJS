@@ -197,6 +197,9 @@
     <Compile Include="Models\birthdate_books.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\birthday_eighty_percent_off_Result.cs">
+      <DependentUpon>BOBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\BOBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -220,6 +223,12 @@
     <Compile Include="Models\bookstore.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\bookstores_in_city_Result.cs">
+      <DependentUpon>BOBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Books_eighty_percent_off_Result.cs">
+      <DependentUpon>BOBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\CD音樂.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
@@ -233,11 +242,29 @@
     <Compile Include="Models\Employee.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Emp_Manager.cs">
+      <DependentUpon>BOBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\EventLog.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\extend.cs" />
+    <Compile Include="Models\Generate_duration_Result.cs">
+      <DependentUpon>BOBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetErrorInformation_Result.cs">
+      <DependentUpon>BOBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetErrorInfo_Result.cs">
+      <DependentUpon>BOBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\joined_bob_tables_Result.cs">
+      <DependentUpon>BOBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\KL_Bookstores_Result.cs">
+      <DependentUpon>BOBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Log.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
@@ -263,6 +290,9 @@
     <Compile Include="Models\order.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\order_table.cs">
+      <DependentUpon>BOBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Product_Name.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
@@ -281,6 +311,12 @@
     <Compile Include="Models\Schedule.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>BOBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>BOBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Student.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
@@ -288,6 +324,9 @@
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ToBeUpdated.cs">
+      <DependentUpon>BOBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Total_Order.cs">
       <DependentUpon>BOBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Trip.cs">
@@ -1256,6 +1295,10 @@
     <Content Include="Views\Orders\Edit.cshtml" />
     <Content Include="Views\Orders\Delete.cshtml" />
     <Content Include="Views\d3js\Treemap.cshtml" />
+    <Content Include="Views\d3js\Index.cshtml" />
+    <Content Include="Views\d3js\Tree.cshtml" />
+    <Content Include="Views\d3js\Partion.cshtml" />
+    <Content Include="Views\d3js\Pack.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

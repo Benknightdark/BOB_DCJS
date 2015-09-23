@@ -19,7 +19,7 @@
     }
 
     .node {
-        border: solid 2px white;
+        border: solid 1px #000000;
         position: absolute;
     }
 
@@ -36,7 +36,7 @@
         -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
         pointer-events: none;
-        z-index:3;
+        z-index: 3;
     }
 
         #tooltip.hidden {
@@ -51,99 +51,109 @@
         }
 </style>
 <body>
+    @Html.ActionLink("回上一頁", "Index")
     <form>
-        <label><input type="radio" name="mode" value="size" checked> Size</label>
-        <label><input type="radio" name="mode" value="count"> Count</label>
+        <label><input type="radio" name="mode" value="size" checked> 數量排序</label>
+        <label><input type="radio" name="mode" value="count"> 預設排序</label>
     </form>
-
-
+    <!---tooltip前綴資訊-->
+    <div id="tooltip" class="hidden">
+        <p><strong id="bookstore"></strong></p>
+        <p><strong id="quantity"></strong></p>
+    </div>
     <script>
-
+        //宣告Treemap的寬和高，以及上下左右留空的部份
         var margin = { top: 40, right: 10, bottom: 10, left: 10 },
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
+        //宣告顏色尺度
         var color = d3.scale.category20();
-
+        //宣告Treemap圖版
         var treemap = d3.layout.treemap()
             .size([width, height])
-            .sticky(true)
-            .value(function (d) { return d.size; });
+            .sticky(true)//當Treemap裡的元素變形後，還可以保留原來的xy軸座標
+            .value(function (d) { return d.size; });//根據綁定資料的size屬性裡的值決定node的大小
 
+        //宣告TreeMap圖版的繪製範圍，不宣告成SVG元素的原因在於，
+        //TreeMap的圖版不是SVG的相關元素製成，而是用DIV元素繪製而成        
         var div = d3.select("body").append("div")
             .style("position", "relative")
             .style("width", (width + margin.left + margin.right) + "px")
             .style("height", (height + margin.top + margin.bottom) + "px")
             .style("left", margin.left + "px")
             .style("top", margin.top + "px");
-        d3.json("/d3js/TreeMapData", function (error, root) {
-            if (error) { console.log(error) };
-          // console.log(root[0]);
 
-            var node = div.datum(root[0]).selectAll(".node")
-                .data(treemap.nodes)
+        //讀取Json資料
+        d3.json("/d3js/D3jsData", function (error, root) {
+            if (error) { console.log(error) }
+            else {
+                //輸出樹狀地圖函式
+                LoadData(root);
+            };
+        });
+        function LoadData(root) {
+            //利用datum綁定陣列資料
+            //參考來源： http://goo.gl/4Vhfe4
+            var node = div.datum(root[0]).selectAll("node")
+                .data(treemap.nodes)//將陣列資料綁定至樹狀地圖圖版的所有node中
               .enter().append("div")
-
                 .attr("class", "node")
-                .call(position)
-                
+                .call(position)//呼叫position函式，以建立每個node的位置
                 .text(function (d) {
-               //    console.log(d);
-                    return (d.children ? null : "書名：" + d.name + " 數量：" + d.size);
+                    //如果node元素裡的children屬性的值存在 (代表為root)
+                    //，則回傳null值，否則回傳name屬性的值
+                    return (d.children ? null : "書名：" + d.name);
                 })
-        
                 .style({
-                    "background": function (d) { return d.children ? color(d.name) : null; }
+                    //如果node元素裡的children屬性的值存在 (代表為root)
+                    //，則背景為透過color函式回傳背景顏色，否則為null
+                    "background": function (d) { return d.children ? color(d.name) : null; },
+                    "ont-family": " sans-serif",
+                    "font-size": "16px",
+                    "font-weight": " bold"
                 })
+                //當滑鼠移到某個node元素時，則出現tooltip資訊
                .on("mousemove", function (d) {
-                   var xPosition = d3.event.pageX + 5;
-                   var yPosition = d3.event.pageY + 5;
-
+                   //建立tooltip的xy軸位置和遞移效果
                    d3.select("#tooltip")
-                     .style("left", d.x+"px")
-                     .style("top", d.y+100 + "px");
-                   d3.select("#tooltip #value")
+                       .transition()
+                      .duration(100)
+                     .style("left", d.x + "px")
+                     .style("top", d.y + 200 + "px");//node元素的y軸值再加上200px
+                   //呈現node元素的root屬性的值
+                   d3.select("#tooltip #bookstore")
                      .text(d.parent.name);
-
-                   console.log(d);
-                   //console.log(d.parent.name + d.x + " " + d.y);
+                   //呈現node元素的size屬性的值
+                   d3.select("#tooltip #quantity")
+                    .text("數量：" + d.size + "本");
+                   //將tooltip的hidden class設為false，以秀出tooltip資訊
                    d3.select("#tooltip").classed("hidden", false);
                })
+                //當滑鼠移走某個node元素時，則把tooltip的hidden class設為true，以隱藏此元素
             .on("mouseout", function () { d3.select("#tooltip").classed("hidden", true); });
 
-            
-             
-              
-         
-
+            //node元素的排序函式
             d3.selectAll("input").on("change", function change() {
-                var value = this.value === "count"
-                    ? function () { return 1; }
-                    : function (d) { return d.size; };
-
+                //當radio按鈕改變時，則判斷回傳的值是否為count，
+                //如果是則回傳true，否則回傳判斷元素的size屬性值
+                var value = this.value == "count"
+                    ? function () { return 1; }//樹狀地圖的預設排序 (根據每個root的node進行平等的切分)
+                    : function (d) { return d.size; };//依據綁定資料的size屬性值決定node元素的大小                
+                //重新組成每個node元素的大小排列
                 node
                     .data(treemap.value(value).nodes)
                   .transition()
                     .duration(1500)
                     .call(position);
             });
-        });
-
+        }
+        //回傳node元素位置函式
         function position() {
             this.style("left", function (d) { return d.x + "px"; })
                 .style("top", function (d) { return d.y + "px"; })
                 .style("width", function (d) { return Math.max(0, d.dx - 1) + "px"; })
                 .style("height", function (d) { return Math.max(0, d.dy - 1) + "px"; });
         }
-        
-    
-      
-
     </script>
-
-    <div id="tooltip" class="hidden">
-        <p><strong id="value"></strong></p>
-    </div>
-
 </body>
-
