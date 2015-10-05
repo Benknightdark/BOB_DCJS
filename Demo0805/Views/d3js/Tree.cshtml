@@ -26,7 +26,7 @@
 </style>
 @Html.ActionLink("回上一頁", "Index")
 <script>
-    var margin = { top: 20, right: 120, bottom: 20, left: 120 },// { top: 20, right: 120, bottom: 20, left: 120 }
+    var margin = { top: 20, right: 120, bottom: 20, left: 120 },
 width = 3000 - margin.right - margin.left,
 height = 1500 - margin.top - margin.bottom;
 
@@ -50,7 +50,6 @@ height = 1500 - margin.top - margin.bottom;
         root = data[0];
         root.x0 = height / 2;
         root.y0 = 0;
-
         function collapse(d) {
             /*如果書局有書籍的資料時則將這些資料存入暫存的_children中*/
             if (d.children) {
@@ -62,7 +61,6 @@ height = 1500 - margin.top - margin.bottom;
         }
         /*收合root的子結點底下的所有子結點*/
         root.children.forEach(collapse);
-
         update(root);
     });
 
@@ -71,10 +69,8 @@ height = 1500 - margin.top - margin.bottom;
         // 建立樹的點和連結
         var nodes = tree.nodes(root).reverse(),
             links = tree.links(nodes);
-
-
         // 將樹每個點的深度調高一點，避免每個點的間距過寬
-        nodes.forEach(function (d) { d.y = d.depth * 180; });//180
+        nodes.forEach(function (d) { d.y = d.depth * 180; });
 
         // 加入node class和其node的編號
         var node = svg.selectAll("g.node")
@@ -126,8 +122,10 @@ height = 1500 - margin.top - margin.bottom;
         var link = svg.selectAll("path.link")
             .data(links, function (d) { return d.target.id; });
 
-        // 加入link的xy座標
-        link.enter().insert("path", "g")
+        // 加入link的xy座標，利用insert加入元素
+        //以確保樹的連結線會在node產生後，才會出現
+        //否則線會蓋住node
+        link.enter().insert("path","g")
             .attr("class", "link")
         .attr("d", diagonal);
 

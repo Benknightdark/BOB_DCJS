@@ -1,10 +1,13 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Pack";
     Layout = "~/Views/_template.cshtml";
 }
 
 <style>
+    text {
+        font: 10px sans-serif;
+    }
+
     circle {
         fill: rgb(31, 119, 180);
         fill-opacity: .25;
@@ -16,47 +19,42 @@
         fill: #ff7f0e;
         fill-opacity: 1;
     }
-
-    text {
-        font: 10px sans-serif;
-    }
 </style>
 <script>
+    //宣告打包圖版型和主圖的直徑
+    var diameter = 960;
+    var pack = d3.layout.pack()
+        .size([diameter - 4, diameter - 4])
+        .value(function (d) { return d.size; });
+    //建立SVG畫布
+    var svg = d3.select("body").append("svg")
+        .attr("width", diameter)
+        .attr("height", diameter);
+    //將資料綁定至打包圖圖版
+    d3.json("/d3js/D3jsData", function (error, root) {
+        if (error) throw error;
+        var node =
+            svg.datum(root[0]).selectAll(".node")
+            .data(pack.nodes)
+            .enter().append("g")
+            .attr({
+                //如果該元素具有children的屬性值則clss為node (最外層圓)
+                //，否則為 leaf node (內部的圓)
+                "class": function (d) { return d.children ? "node" : "leaf node"; },
+                //讓每個元素可以根據自己的x軸和y軸值位移到該位置
+                //以避免每個元素的位置都出現在同一個位置
+                "transform": function (d) { return "translate(" + d.x + "," + d.y + ")"; }
+            });
+        //加入circle元素，並加入半徑(r)屬性
+        node.append("circle")
+            .attr("r", function (d) { return d.r; });
+        // 只回傳node元素底下不函children屬性的元素，並加入文字屬性
+        // 並給予書籍名稱和書籍數量
+        node.filter(function (d) { return !d.children; }).append("text")
+            .attr("dy", ".3em")
+            .style("text-anchor", "middle")
+            .text(function (d) { return d.name + "：" + d.value + "本"; });
+    });
 
-var diameter = 960,
-    format = d3.format(",d");
-
-var pack = d3.layout.pack()
-    .size([diameter - 4, diameter - 4])
-    .value(function(d) { return d.size; });
-
-var svg = d3.select("body").append("svg")
-    .attr("width", diameter)
-    .attr("height", diameter)
-  .append("g")
-    .attr("transform", "translate(2,2)");
-
-d3.json("/d3js/D3jsData", function (error, root) {
-  if (error) throw error;
-
-  var node = svg.datum(root[0]).selectAll(".node")
-      .data(pack.nodes)
-    .enter().append("g")
-      .attr("class", function(d) { return d.children ? "node" : "leaf node"; })
-      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
-
-  node.append("title")
-      .text(function(d) { return d.name + (d.children ? "" : ": " + format(d.size)); });
-
-  node.append("circle")
-      .attr("r", function(d) { return d.r; });
-
-  node.filter(function(d) { return !d.children; }).append("text")
-      .attr("dy", ".3em")
-      .style("text-anchor", "middle")
-      .text(function(d) { return d.name.substring(0, d.r / 3); });
-});
-
-d3.select(self.frameElement).style("height", diameter + "px");
 
 </script>
