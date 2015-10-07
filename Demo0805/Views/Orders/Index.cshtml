@@ -53,7 +53,7 @@
     <li class="active"><a data-toggle="tab" href="#home">書籍存貨表</a></li>
     <li><a data-toggle="tab" href="#menu1">篩選查詢</a></li>
     <li><a data-toggle="tab" href="#menu2">新增存貨</a></li>
-    <li><a data-toggle="tab" href="#menu3">DC.js多維度儀表版</a></li>  
+    <li><a data-toggle="tab" href="#menu3">DC.js多維度儀表版</a></li>
 </ul>
 
 <div class="tab-content">
@@ -157,21 +157,16 @@
         <div id="QuantityLineChart">
             <h3><span class="label label-success">總存貨維度折線圖</span></h3>
         </div>
-        <div id="BookStorePieChart">
-            <div class="input-group">
-                <h3><span class="label label-success">書局總存貨維度圓餅圖</span></h3>
+        @*<div id="BookStorePieChart">
+                <div class="input-group">
+                    <h3><span class="label label-success">書局總存貨維度圓餅圖</span></h3>
+                </div>
             </div>
-        </div>
-        <div id="BookPieChart">
-            <div class="input-group">
-                <h3><span class="label label-success">書籍總存貨維度圓餅圖</span></h3>
-            </div>
-        </div>
-        <div id="chart-line-hitsperday">
-            <div class="input-group">
-                <h3><span class="label label-success">歷史圖</span></h3>
-            </div>
-        </div>
+            <div id="BookPieChart">
+                <div class="input-group">
+                    <h3><span class="label label-success">書籍總存貨維度圓餅圖</span></h3>
+                </div>
+            </div>*@
 
         <div class="row">
             <div class="col-xs-12">
@@ -254,7 +249,7 @@
                 </div>
             </div>
         </div>
-        <div id="chart"></div>
+        @*<div id="chart"></div>*@
     </div>
 </div>
 <script>
@@ -360,6 +355,7 @@
                 console.log('Error: ' + xhr.statusText);
             },
             success: function (dataset) {
+                console.log(dataset);
                 LoadData(dataset);//呼叫輸出圖表function
                 ResetOption();//呼叫還原圖表function
             }
@@ -382,37 +378,7 @@
         var QuantityByBookstore = Bookstore.group().reduceSum(function (d) {
             return d.quantity;
         });
-        
 
-        var QuantityByBookstore_a = Bookstore.group().reduceSum(function (d) {
-            if (d.name == "天秤書局") {
-                return d.quantity;
-            } else {
-                return 0;
-            }
-            
-        });
-        var QuantityByBookstore_b = Bookstore.group().reduceSum(function (d) {
-            if (d.name == "獅子書局") {
-                return d.quantity;
-            } else {
-                return 0;
-            }
-        });
-        var QuantityByBookstore_c = Bookstore.group().reduceSum(function (d) {
-            if (d.name == "巨蟹書局") {
-                return d.quantity;
-            } else {
-                return 0;
-            }
-        });
-        var QuantityByBookstore_d = Bookstore.group().reduceSum(function (d) {
-            if (d.name == "射手書局") {
-                return d.quantity;
-            } else {
-                return 0;
-            }
-        });
         //書籍維度的存貨數量
         var QuantityByBook = Book.group().reduceSum(function (d) {
             return d.quantity;
@@ -448,6 +414,17 @@
             PublisherDomain.push(dataset[a].publisher);//將書籍名稱加入BookDomain陣列
         };
 
+
+        //顏色尺度
+        function ColorScale(domain) {
+            var x = d3.scale.ordinal()
+             .domain(domain)
+             .range(d3.scale.category20());
+            return x;
+        };
+
+
+
         //#endregion
         BookBarChart();
         BookStoreBarChart();
@@ -456,7 +433,6 @@
         BookStorePieChart();
         BookPieChart();
         QuantityLineChart();
-        stacked();
         Tables();
 
         //#region 圖表輸出
@@ -472,13 +448,12 @@
             .margins({ top: 10, right: 50, bottom: 30, left: 40 })//加入margins的CSS
             .dimension(Book)//加入書籍的維度資料
             .group(QuantityByBook)//加入書籍維度的存貨數量
-              .legend(dc.legend())
             .x(d3.scale.ordinal().domain(BookDomain))//x軸是以序數尺度呈現，其domain會呼叫BookDomain所回傳的書籍名稱陣列
            .xUnits(dc.units.ordinal)//輸出x軸domain裡的書籍名稱
             .y(d3.scale.linear().domain([d3.min(dataset, function (d) { return d.quantity; }) - 10, d3.max(dataset, function (d) { return d.quantity; }) + 200]))//y軸是以線性尺度呈現，其範圍為0~900
             .centerBar(true)//輸出的長條圖設為置中
-            .colors(d3.scale.category20b())
-            .colors(["#a60000", "#ff0000", "#ff4040", "#ff7373", "#67e667", "#39e639", "#00cc00"])
+               .colors(ColorScale(BookDomain).range())
+                .colorAccessor(function (d) { return ColorScale(BookDomain).domain().indexOf(d.data.key); })
             .renderHorizontalGridLines(true)//輸出圖表的GridLine
             .title(function (d) { return " \書籍數量: " + d.data.value; })//當移動到長條圖時，會以前綴資訊秀出書籍數量
             .renderlet(
@@ -517,7 +492,6 @@
 
                          })
             }
-
             )
             ;
         };
@@ -533,7 +507,7 @@
                 .margins({ top: 10, right: 50, bottom: 30, left: 40 })//加入margins的CSS
                 .dimension(Bookstore)//加入書局的維度資料
                 .group(QuantityByBookstore)//加入書局維度的存貨數量
-               
+
                  .title(function (d) { return " \書籍數量: " + d.data.value; })//當移動到長條圖時，會以前綴資訊秀出書籍數量
                 .x(d3.scale.ordinal().domain(BookStoreDomain))//x軸是以序數尺度呈現，其domain會呼叫
                                                                                                              //BookStoreDomain所回傳的書局名稱陣列
@@ -544,7 +518,8 @@
                 .centerBar(true)//輸出的長條圖設為置中
 
                 .renderHorizontalGridLines(true)//輸出圖表的GridLine
-
+                .colors(ColorScale(BookStoreDomain).range())
+                .colorAccessor(function (d) { return ColorScale(BookStoreDomain).domain().indexOf(d.data.key); })
             .renderlet(
             //呈現bar chart 標籤文字
             function (Label) {
@@ -600,6 +575,9 @@
             .centerBar(true)//輸出的長條圖設為置中
             .renderHorizontalGridLines(true)//輸出圖表的GridLine
             .title(function (d) { return " \書籍數量: " + d.data.value; })//當移動到長條圖時，會以前綴資訊秀出書籍數量
+                                .colors(ColorScale(PublisherDomain).range())
+                .colorAccessor(function (d) { return ColorScale(PublisherDomain).domain().indexOf(d.data.key); })
+
             .renderlet(
                     //呈現bar chart 標籤文字
                     function (Label) {
@@ -668,7 +646,7 @@
             .renderLabel(true)//是否回傳資料標籤
             .label(function (d) {//回傳資料的key值和value值
                 return (d.data.key + " : " + d.data.value);
-            });          
+            });
         };
         function BookPieChart() {
             window.BookPieChart = dc.pieChart("#BookPieChart");
@@ -693,28 +671,11 @@
             + 2, d3.max(dataset, function (d) { return d.quantity; }) + 2]))
          .interpolate('step-before')//將折線圖裡線的分佈方式以水平和垂直方式呈現
             .renderArea(true)//是否啟用區塊顏色
-            .brushOn(true)   // 是否啟用過濾功能        
+            .brushOn(true)   // 是否啟用過濾功能
             .xAxisLabel('總存貨數量')
            .yAxisLabel('總數')
             .dimension(Quantity)
             .group(QuantityGroup);
-        };
-        function stacked() {
-            window.barChart = dc.barChart("#chart-line-hitsperday");
-            window.barChart
-            .width(1000).height(200)
-	.dimension(Book)
-                            .x(d3.scale.ordinal().domain(BookDomain))//x軸是以序數尺度呈現，其domain會呼叫BookDomain所回傳的書籍名稱陣列
-
-        .group(QuantityByBookstore_a, "天秤書局")
-        .stack(QuantityByBookstore_b, "獅子書局")
-        .stack(QuantityByBookstore_c, "巨蟹書局")
-        .stack(QuantityByBookstore_d, "射手書局")
-       
-      
-        .legend(dc.legend().x(60).y(10).itemHeight(13).gap(5))
-	.yAxisLabel("Hits per day")
-            ;
         };
         //#endregion
         //#region 表格輸出
@@ -730,10 +691,8 @@
                function (d) { return d.quantity; },
                function (d) { return "<a href=Edit/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Edit" + "</a>"; },
                   function (d) { return "<a href=Delete/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Delete" + "</a>"; }
-            ])
-                .renderlet(function (d) { return console.log(d); });
-        
-               
+            ]);
+                
             /*書籍維度表*/
             dataTable2 = dc.dataTable('#data-table2');
             dataTable2
@@ -747,7 +706,7 @@
          function (d) { return "<a href=Delete/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Delete" + "</a>"; }
        ]);
 
-   
+
             /*總表*/
             dataTable3 = dc.dataTable('#data-table3');
             dataTable3
@@ -762,7 +721,6 @@
          function (d) { return "<a href=Delete/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Delete" + "</a>"; }
        ]);
 
-   
             /*出版社維度表*/
             dataTable4 = dc.dataTable('#data-table4');
             dataTable4
@@ -775,8 +733,8 @@
          function (d) { return "<a href=Edit/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Edit" + "</a>"; },
          function (d) { return "<a href=Delete/" + d.id + "?no=" + d.no + ">" + "@L10N.Resource.Delete" + "</a>"; }
        ]);
-   
-   
+
+
         };
         //#endregion
 

@@ -189,6 +189,7 @@
     <Compile Include="Controllers\BookstoresController.cs" />
     <Compile Include="Controllers\d3jsController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\nvd3jsController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -411,6 +412,7 @@
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="專案用資料庫\DATABASE.7z" />
+    <Content Include="Scripts\d3\LICENSE" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
@@ -505,7 +507,6 @@
       <DependentUpon>BOBModel.edmx</DependentUpon>
       <LastGenOutput>BOBModel.cs</LastGenOutput>
     </Content>
-    <Content Include="Scripts\d3\LICENSE" />
     <Content Include="LICENSE.md" />
     <Content Include="Scripts\CrossFilter\README.md" />
     <Content Include="Scripts\CrossFilter\LICENSE" />
@@ -1300,6 +1301,7 @@
     <Content Include="Views\d3js\Tree.cshtml" />
     <Content Include="Views\d3js\Partion.cshtml" />
     <Content Include="Views\d3js\Pack.cshtml" />
+    <Content Include="Views\nvd3js\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
