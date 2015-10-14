@@ -1,0 +1,210 @@
+﻿@{
+    ViewBag.Title = "JJMFVis";
+    Layout = "~/Views/_template.cshtml";
+}
+@model IEnumerable<Demo0805.Models.NVD3MultiChartModel>
+<style>
+    #chart svg {
+        height: 400px;
+    }
+</style>
+
+<div id="chart">
+    <svg></svg>
+</div>
+<form>
+    <input id="Text1" type="text" />
+    <input id="Text1" type="text" />
+    <input id="b1" type="button" value="button" />
+</form>
+<script>
+    d3.select("#b1").on("click",function(){
+        $.ajax({
+            url: "@Url.Content("~/nvd3js/AddFun")",
+            dataType: "json",
+            type: "POST",
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify( { a: 1, b: 2 } ),
+            async: true,
+            processData: false,
+            cache: false,
+            success: function (data) {
+                alert(data);
+            },
+            error: function (xhr) {
+                alert('error');
+            }
+        })
+
+
+    });
+</script>
+<script>
+
+    var axisKey = @Html.Raw(ViewBag.xAxisLabel );
+    console.log(axisKey);
+    d3.json("/nvd3js/JJMFVisData", function (error, data) {
+        if (error) { console.log(error) }
+        else {
+            console.log(data);
+            var seriesdata = data;
+            var margin = { top: 50, right: 50, bottom: 120, left: 70 };
+            var svg = "#chart svg";
+
+
+            var axisKeys = axisKey;
+
+            nv.addGraph(function () {
+                var chart = nv.models.multiChart()
+                   .options({ reduceXTicks: false })
+                    .margin(margin)
+                    .color(d3.scale.category10().range())
+                ;
+
+                chart.xAxis
+                    .tickFormat(function (d) {
+                        // If there is such element, return it
+                        if (typeof axisKeys[d] !== "undefined") {
+                            console.log(d);
+                            return axisKeys[d];
+                        }
+                        return "";
+                    });
+
+                // Get normalised data for chart
+                var seriesData = data;
+
+                // Get max values for each axis
+                var minY1 = 0;
+                var minY2 = 0;
+                var maxY1 = 0;
+                var maxY2 = 0;
+                for (var i = 0; i < seriesData.length; i++) {
+                    var _axis = seriesData[i].yAxis;
+                    var _values = seriesData[i].values;
+
+                    // Walk values and set largest to variables
+                    for (var j = 0; j < _values.length; j++) {
+                        // For maxY1
+                        if (_axis == 1) {
+                            if (_values[j].y > maxY1) {
+                                maxY1 = _values[j].y;
+                            }
+                        }
+                        // For maxY2
+                        if (_axis == 2) {
+                            if (_values[j].y > maxY2) {
+                                maxY2 = _values[j].y;
+                            }
+                        }
+                    }
+                }
+
+                // Set min, max values of axis
+                chart.yDomain1([minY1, maxY1]);
+                chart.yDomain2([minY2, maxY2]);
+                //chart.bars1.stacked(true);
+                //chart.bars2.stacked(true);
+                // Set chart
+                d3.select(svg)
+                    .datum(seriesData)
+                    .call(chart);
+
+                // Auto resize chart on window resize
+                nv.utils.windowResize(chart.update);
+
+                return chart;
+
+            });
+
+        }
+    });
+</script>
+@*<script>
+        var margin = { top: 50, right: 50, bottom: 120, left: 70 };
+        var svg = "#chart svg";
+        var normalisedData = [{
+            "key": "Data 1", "type": "line", "yAxis": 1, "values":
+                [{ "x": 0, "y": 0 }, { "x": 1, "y": 1 }, { "x": 2, "y": 0 }, { "x": 3, "y": 3 }, { "x": 4, "y": 0 }, { "x": 5, "y": 1 }]
+        }, {
+            "key": "Data 2", "type": "line", "yAxis": 1, "values":
+                [{ "x": 0, "y": 1 }, { "x": 1, "y": 2 }, { "x": 2, "y": 1 }, { "x": 3, "y": 1 }, { "x": 4, "y": 2 }, { "x": 5, "y": 0 }]
+        }, {
+            "key": "Data 3", "type": "line", "yAxis": 1, "values":
+                [{ "x": 0, "y": 0 }, { "x": 1, "y": 0 }, { "x": 2, "y": 0 }, { "x": 3, "y": 0 }, { "x": 4, "y": 2 }, { "x": 5, "y": 0 }]
+        }, {
+            "key": "Data 4", "type": "bar", "yAxis": 2, "values":
+                [{ "x": 0, "y": 0 }, { "x": 1, "y": 0 }, { "x": 2, "y": 0 }, { "x": 3, "y": 0 }, { "x": 4, "y": 440 }, { "x": 5, "y": 0 }]
+        }, {
+            "key": "Data 5", "type": "bar", "yAxis": 2, "values":
+                [{ "x": 0, "y": 1140 }, { "x": 1, "y": 4120 }, { "x": 2, "y": 2060 }, { "x": 3, "y": 2060 }, { "x": 4, "y": 7055 }, { "x": 5, "y": 0 }]
+        }, {
+            "key": "Data 6", "type": "bar", "yAxis": 2, "values":
+                [{ "x": 0, "y": 0 }, { "x": 1, "y": 8000 }, { "x": 2, "y": 0 }, { "x": 3, "y": 13797 }, { "x": 4, "y": 0 }, { "x": 5, "y": 865.18 }]
+        }];
+
+        var axisKeys = ["2014-Jan", "2014-Feb", "2014-Mar", "2014-Apr", "2014-May", "2014-Jun", "2014-jul"];
+
+        nv.addGraph(function () {
+            var chart = nv.models.multiChart()
+               // .options({ reduceXTicks: false })
+                .margin(margin)
+                .color(d3.scale.category10().range())
+            ;
+
+            chart.xAxis
+                .tickFormat(function (d,i) {
+                    // If there is such element, return it
+                    if (typeof axisKeys[d] !== "undefined") {
+                        console.log(d,i);
+                        return axisKeys[d];
+                    }
+                    return "";
+                });
+
+            // Get normalised data for chart
+            var seriesData = normalisedData;
+
+            // Get max values for each axis
+            var minY1 = 0;
+            var minY2 = 0;
+            var maxY1 = 0;
+            var maxY2 = 0;
+            for (var i = 0; i < seriesData.length; i++) {
+                var _axis = seriesData[i].yAxis;
+                var _values = seriesData[i].values;
+
+                // Walk values and set largest to variables
+                for (var j = 0; j < _values.length; j++) {
+                    // For maxY1
+                    if (_axis == 1) {
+                        if (_values[j].y > maxY1) {
+                            maxY1 = _values[j].y;
+                        }
+                    }
+                    // For maxY2
+                    if (_axis == 2) {
+                        if (_values[j].y > maxY2) {
+                            maxY2 = _values[j].y;
+                        }
+                    }
+                }
+            }
+
+            // Set min, max values of axis
+            chart.yDomain1([minY1, maxY1]);
+            chart.yDomain2([minY2, maxY2]);
+            chart.bars1.stacked(true);
+            chart.bars2.stacked(true);
+            // Set chart
+            d3.select(svg)
+                .datum(seriesData)
+                .call(chart)
+            ;
+
+            // Auto resize chart on window resize
+            nv.utils.windowResize(chart.update);
+
+            return chart;
+        });
+    </script>*@

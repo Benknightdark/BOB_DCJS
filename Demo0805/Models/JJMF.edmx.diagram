@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4f52e09e7bd4406aafc45fb0d1e1e2cc" Name="Diagram1">
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabAnnualLeaveCondition" Width="1.5" PointX="7.5" PointY="124.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabAttnEnv" Width="1.5" PointX="10.5" PointY="133.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabCatContent" Width="1.5" PointX="15.75" PointY="153.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabCategory" Width="1.5" PointX="7.5" PointY="128.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabCode" Width="1.5" PointX="3" PointY="101.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabColumn" Width="1.5" PointX="24" PointY="157.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabColumnsSetting" Width="1.5" PointX="24" PointY="162.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabContent" Width="1.5" PointX="13.5" PointY="129.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabEmpDeputy" Width="1.5" PointX="12.5" PointY="138.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabEmployee" Width="1.5" PointX="15.5" PointY="138.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabEmpOrg" Width="1.5" PointX="21.75" PointY="151.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabEmpProCert" Width="1.5" PointX="21.75" PointY="146.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabENV" Width="1.5" PointX="7.5" PointY="134.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabENVItem" Width="1.5" PointX="9.75" PointY="156" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabForgotPWD" Width="1.5" PointX="7.5" PointY="138.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabJobScheduler" Width="1.5" PointX="7.5" PointY="141.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabJobSchedulerExecutedHistory" Width="1.5" PointX="9.75" PointY="142.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabLangMapping" Width="1.5" PointX="12.5" PointY="143.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabMessage" Width="1.5" PointX="10.5" PointY="128.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabMessageContent" Width="1.5" PointX="15.75" PointY="150.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabNotify" Width="1.5" PointX="7.5" PointY="147" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabOrganization" Width="1.5" PointX="24" PointY="135" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabOrgEnv" Width="1.5" PointX="26.25" PointY="153.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabPersonal" Width="1.5" PointX="16.5" PointY="132.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabProCert" Width="1.5" PointX="16.5" PointY="127.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabRole" Width="1.5" PointX="15.5" PointY="145.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabRoleAuth" Width="1.5" PointX="24" PointY="153.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabRoleUser" Width="1.5" PointX="17.75" PointY="162.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabTable" Width="1.5" PointX="18.75" PointY="153.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabType" Width="1.5" PointX="0.75" PointY="104.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabUser" Width="1.5" PointX="5.25" PointY="147.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabUserAuth" Width="1.5" PointX="20" PointY="165.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabWinScheduler" Width="1.5" PointX="7.5" PointY="151.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabWinSchExeHistory" Width="1.5" PointX="9.75" PointY="152.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabEmpLeave" Width="1.5" PointX="12.75" PointY="148.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabEmpLeaveDay" Width="1.5" PointX="24" PointY="167.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabEmpLeaveDaysControl" Width="1.5" PointX="27" PointY="158.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabEmpOvertime" Width="1.5" PointX="24" PointY="143.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabEmpSkill" Width="1.5" PointX="18.75" PointY="158" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabLeaveCode" Width="1.5" PointX="7.5" PointY="157.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabOffDay" Width="1.5" PointX="18.5" PointY="137.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabOvertimeCode" Width="1.5" PointX="7.5" PointY="162.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabPayControl" Width="1.5" PointX="21.75" PointY="158.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabPayPeriod" Width="1.5" PointX="18.5" PointY="142.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabProCertSkill" Width="1.5" PointX="18.75" PointY="149.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabSkill" Width="1.5" PointX="9.75" PointY="160.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabSkillType" Width="1.5" PointX="7.5" PointY="172.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabTaskEnv" Width="1.5" PointX="7.5" PointY="176.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabWorkCode" Width="1.5" PointX="7.5" PointY="184.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabWorkGroup" Width="1.5" PointX="7.5" PointY="192" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.InfoFabWorkPattern" Width="1.5" PointX="9.75" PointY="170" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.JJMFEmpProcedure" Width="1.5" PointX="29.25" PointY="168.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.JJMFEmpTaskDailyDisplay" Width="1.5" PointX="32.25" PointY="165.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.JJMFEmpTaskDailyRecord" Width="1.5" PointX="29.25" PointY="148.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.JJMFProcedure" Width="1.5" PointX="7.5" PointY="196.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.JJMFTask" Width="1.5" PointX="27" PointY="138.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.JJMFTaskCal" Width="1.5" PointX="32.25" PointY="170" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.JJMFTaskCalItem" Width="1.5" PointX="34.5" PointY="159.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.JJMFTaskInternalProc" Width="1.5" PointX="29.25" PointY="164.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysall_columns" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysall_objects" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysall_parameters" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysall_sql_modules" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysall_views" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysallocation_units" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysassembly" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysassembly_files" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysassembly_modules" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysassembly_references" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysassembly_types" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysasymmetric_keys" Width="1.5" PointX="4.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysbackup_devices" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syscertificate" Width="1.5" PointX="6.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syschange_tracking_databases" Width="1.5" PointX="8.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syschange_tracking_tables" Width="1.5" PointX="10.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syscheck_constraints" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syscolumn_type_usages" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syscolumn_xml_schema_collection_usages" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syscolumn" Width="1.5" PointX="12.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syscomputed_columns" Width="1.5" PointX="8.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysconfiguration" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysconversation_endpoints" Width="1.5" PointX="14.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysconversation_groups" Width="1.5" PointX="14.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysconversation_priorities" Width="1.5" PointX="14.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syscredential" Width="1.5" PointX="0.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syscrypt_properties" Width="1.5" PointX="2.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syscryptographic_providers" Width="1.5" PointX="4.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdata_spaces" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdatabase_audit_specification_details" Width="1.5" PointX="16.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdatabase_audit_specifications" Width="1.5" PointX="16.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdatabase_files" Width="1.5" PointX="16.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdatabase_mirroring" Width="1.5" PointX="10.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdatabase_mirroring_endpoints" Width="1.5" PointX="12.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdatabase_mirroring_witnesses" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdatabase_permissions" Width="1.5" PointX="4.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdatabase_principal_aliases" Width="1.5" PointX="18.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdatabase_principals" Width="1.5" PointX="18.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdatabase_recovery_status" Width="1.5" PointX="18.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdatabase_role_members" Width="1.5" PointX="14.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdatabas" Width="1.5" PointX="18.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdefault_constraints" Width="1.5" PointX="0.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdestination_data_spaces" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_audit_actions" Width="1.5" PointX="20.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_db_index_usage_stats" Width="1.5" PointX="6.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_db_mirroring_auto_page_repair" Width="1.5" PointX="20.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_db_mirroring_past_actions" Width="1.5" PointX="20.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_db_missing_index_details" Width="1.5" PointX="20.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_db_missing_index_group_stats" Width="1.5" PointX="20.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_db_missing_index_groups" Width="1.5" PointX="14.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_db_partition_stats" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_db_persisted_sku_features" Width="1.5" PointX="2.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_db_script_level" Width="1.5" PointX="22.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_exec_background_job_queue" Width="1.5" PointX="8.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_exec_background_job_queue_stats" Width="1.5" PointX="22.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_exec_cached_plans" Width="1.5" PointX="10.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_exec_connections" Width="1.5" PointX="22.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_exec_procedure_stats" Width="1.5" PointX="22.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_exec_query_optimizer_info" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_exec_query_stats" Width="1.5" PointX="24.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_exec_query_transformation_stats" Width="1.5" PointX="24.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_exec_requests" Width="1.5" PointX="12.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_exec_sessions" Width="1.5" PointX="14.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_exec_trigger_stats" Width="1.5" PointX="24.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_filestream_file_io_handles" Width="1.5" PointX="24.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_filestream_file_io_requests" Width="1.5" PointX="0.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_fts_active_catalogs" Width="1.5" PointX="2.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_fts_fdhosts" Width="1.5" PointX="26.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_fts_index_population" Width="1.5" PointX="26.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_fts_memory_buffers" Width="1.5" PointX="4.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_fts_memory_pools" Width="1.5" PointX="6.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_fts_outstanding_batches" Width="1.5" PointX="8.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_fts_population_ranges" Width="1.5" PointX="26.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_io_backup_tapes" Width="1.5" PointX="26.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_io_pending_io_requests" Width="1.5" PointX="26.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_dispatcher_pools" Width="1.5" PointX="26.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_dispatchers" Width="1.5" PointX="26.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_hosts" Width="1.5" PointX="20.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_latch_stats" Width="1.5" PointX="22.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_loaded_modules" Width="1.5" PointX="28.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_memory_allocations" Width="1.5" PointX="28.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_memory_brokers" Width="1.5" PointX="28.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_memory_cache_clock_hands" Width="1.5" PointX="28.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_memory_cache_counters" Width="1.5" PointX="28.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_memory_cache_entries" Width="1.5" PointX="28.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_memory_cache_hash_tables" Width="1.5" PointX="28.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_memory_clerks" Width="1.5" PointX="16.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_memory_nodes" Width="1.5" PointX="30.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_memory_objects" Width="1.5" PointX="0.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_memory_pools" Width="1.5" PointX="2.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_nodes" Width="1.5" PointX="30.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_performance_counters" Width="1.5" PointX="4.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_process_memory" Width="1.5" PointX="30.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_ring_buffers" Width="1.5" PointX="30.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_schedulers" Width="1.5" PointX="30.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_spinlock_stats" Width="1.5" PointX="22.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_stacks" Width="1.5" PointX="30.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_sublatches" Width="1.5" PointX="24.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_sys_info" Width="1.5" PointX="30.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_sys_memory" Width="1.5" PointX="26.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_tasks" Width="1.5" PointX="6.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_threads" Width="1.5" PointX="8.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_virtual_address_dump" Width="1.5" PointX="18.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_wait_stats" Width="1.5" PointX="32.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_waiting_tasks" Width="1.5" PointX="32.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_windows_info" Width="1.5" PointX="32.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_worker_local_storage" Width="1.5" PointX="32.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_os_workers" Width="1.5" PointX="32.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_qn_subscriptions" Width="1.5" PointX="32.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_resource_governor_configuration" Width="1.5" PointX="32.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_resource_governor_resource_pools" Width="1.5" PointX="32.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_resource_governor_workload_groups" Width="1.5" PointX="20.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_server_audit_status" Width="1.5" PointX="22.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_server_memory_dumps" Width="1.5" PointX="28.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_server_services" Width="1.5" PointX="34.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_tran_active_transactions" Width="1.5" PointX="2.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_tran_commit_table" Width="1.5" PointX="34.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_tran_database_transactions" Width="1.5" PointX="34.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_tran_locks" Width="1.5" PointX="34.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_tran_session_transactions" Width="1.5" PointX="34.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_xe_map_values" Width="1.5" PointX="34.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_xe_object_columns" Width="1.5" PointX="24.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_xe_objects" Width="1.5" PointX="34.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_xe_packages" Width="1.5" PointX="34.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_xe_session_event_actions" Width="1.5" PointX="34.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_xe_session_events" Width="1.5" PointX="14.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_xe_session_object_columns" Width="1.5" PointX="16.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_xe_session_targets" Width="1.5" PointX="36.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysdm_xe_sessions" Width="1.5" PointX="36.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysendpoint_webmethods" Width="1.5" PointX="4.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysendpoint" Width="1.5" PointX="36.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysevent_notification_event_types" Width="1.5" PointX="10.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysevent_notifications" Width="1.5" PointX="36.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysevent" Width="1.5" PointX="36.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysextended_procedures" Width="1.5" PointX="36.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysextended_properties" Width="1.5" PointX="36.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysfilegroup" Width="1.5" PointX="26.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysforeign_key_columns" Width="1.5" PointX="36.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysforeign_keys" Width="1.5" PointX="28.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysfulltext_catalogs" Width="1.5" PointX="36.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysfulltext_document_types" Width="1.5" PointX="30.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysfulltext_index_catalog_usages" Width="1.5" PointX="36.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysfulltext_index_columns" Width="1.5" PointX="32.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysfulltext_index_fragments" Width="1.5" PointX="34.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysfulltext_indexes" Width="1.5" PointX="36.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysfulltext_languages" Width="1.5" PointX="38.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysfulltext_stoplists" Width="1.5" PointX="0.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysfulltext_stopwords" Width="1.5" PointX="38.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysfulltext_system_stopwords" Width="1.5" PointX="38.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysfunction_order_columns" Width="1.5" PointX="6.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syshttp_endpoints" Width="1.5" PointX="38.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysidentity_columns" Width="1.5" PointX="12.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysindex_columns" Width="1.5" PointX="38.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysindex" Width="1.5" PointX="38.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysinternal_tables" Width="1.5" PointX="22.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syskey_constraints" Width="1.5" PointX="38.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syskey_encryptions" Width="1.5" PointX="38.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syslinked_logins" Width="1.5" PointX="38.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysmaster_files" Width="1.5" PointX="38.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysmaster_key_passwords" Width="1.5" PointX="8.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysmessage_type_xml_schema_collection_usages" Width="1.5" PointX="14.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysmessage" Width="1.5" PointX="16.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysmodule_assembly_usages" Width="1.5" PointX="40.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysnumbered_procedure_parameters" Width="1.5" PointX="2.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysnumbered_procedures" Width="1.5" PointX="40.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysobject" Width="1.5" PointX="40.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysparameter_type_usages" Width="1.5" PointX="40.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysparameter_xml_schema_collection_usages" Width="1.5" PointX="40.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysparameter" Width="1.5" PointX="40.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syspartition_functions" Width="1.5" PointX="18.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syspartition_parameters" Width="1.5" PointX="40.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syspartition_range_values" Width="1.5" PointX="24.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syspartition_schemes" Width="1.5" PointX="40.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syspartition" Width="1.5" PointX="40.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysplan_guides" Width="1.5" PointX="30.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysprocedure" Width="1.5" PointX="40.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysremote_logins" Width="1.5" PointX="40.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysremote_service_bindings" Width="1.5" PointX="40.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysresource_governor_configuration" Width="1.5" PointX="4.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysresource_governor_resource_pools" Width="1.5" PointX="32.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysresource_governor_workload_groups" Width="1.5" PointX="42.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysroute" Width="1.5" PointX="42.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysschema" Width="1.5" PointX="6.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysserver_assembly_modules" Width="1.5" PointX="42.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysserver_audit_specification_details" Width="1.5" PointX="8.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysserver_audit_specifications" Width="1.5" PointX="42.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysserver_audits" Width="1.5" PointX="42.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysserver_event_notifications" Width="1.5" PointX="14.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysserver_event_session_actions" Width="1.5" PointX="42.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysserver_event_session_events" Width="1.5" PointX="42.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysserver_event_session_fields" Width="1.5" PointX="42.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysserver_event_session_targets" Width="1.5" PointX="26.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysserver_event_sessions" Width="1.5" PointX="42.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysserver_events" Width="1.5" PointX="42.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysserver_file_audits" Width="1.5" PointX="42.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysserver_permissions" Width="1.5" PointX="34.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysserver_principal_credentials" Width="1.5" PointX="42.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysserver_principals" Width="1.5" PointX="42.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysserver_role_members" Width="1.5" PointX="44.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysserver_sql_modules" Width="1.5" PointX="0.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysserver_trigger_events" Width="1.5" PointX="2.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysserver_triggers" Width="1.5" PointX="44.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysserver" Width="1.5" PointX="44.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysservice_broker_endpoints" Width="1.5" PointX="44.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysservice_contract_message_usages" Width="1.5" PointX="16.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysservice_contract_usages" Width="1.5" PointX="18.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysservice_contracts" Width="1.5" PointX="44.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysservice_message_types" Width="1.5" PointX="20.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysservice_queue_usages" Width="1.5" PointX="44.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysservice_queues" Width="1.5" PointX="22.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysservice" Width="1.5" PointX="44.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssoap_endpoints" Width="1.5" PointX="44.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysspatial_index_tessellations" Width="1.5" PointX="28.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysspatial_indexes" Width="1.5" PointX="30.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssql_dependencies" Width="1.5" PointX="44.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssql_expression_dependencies" Width="1.5" PointX="44.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssql_logins" Width="1.5" PointX="44.75" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssql_modules" Width="1.5" PointX="4.75" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysstat" Width="1.5" PointX="10.75" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysstats_columns" Width="1.5" PointX="24.75" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssymmetric_keys" Width="1.5" PointX="36.75" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssynonym" Width="1.5" PointX="38.75" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysaltfile" Width="1.5" PointX="46.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssyscacheobject" Width="1.5" PointX="46.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssyscharset" Width="1.5" PointX="6.75" PointY="46.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssyscolumn" Width="1.5" PointX="46.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssyscomment" Width="1.5" PointX="12.75" PointY="46.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysconfigure" Width="1.5" PointX="46.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysconstraint" Width="1.5" PointX="46.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssyscurconfig" Width="1.5" PointX="46.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssyscursorcolumn" Width="1.5" PointX="46.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssyscursorref" Width="1.5" PointX="32.75" PointY="46.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssyscursor" Width="1.5" PointX="46.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssyscursortable" Width="1.5" PointX="46.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysdatabas" Width="1.5" PointX="40.75" PointY="46.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysdepend" Width="1.5" PointX="46.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysdevice" Width="1.5" PointX="46.75" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysfilegroup" Width="1.5" PointX="14.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysfile" Width="1.5" PointX="16.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysforeignkey" Width="1.5" PointX="18.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysfulltextcatalog" Width="1.5" PointX="48.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysindex" Width="1.5" PointX="0.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysindexkey" Width="1.5" PointX="48.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssyslanguage" Width="1.5" PointX="48.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssyslockinfo" Width="1.5" PointX="48.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssyslogin" Width="1.5" PointX="48.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysmessage" Width="1.5" PointX="48.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysobject" Width="1.5" PointX="24.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysoledbuser" Width="1.5" PointX="48.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysopentape" Width="1.5" PointX="48.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysperfinfo" Width="1.5" PointX="48.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssyspermission" Width="1.5" PointX="48.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysprocess" Width="1.5" PointX="48.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysprotect" Width="1.5" PointX="42.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysreference" Width="1.5" PointX="48.75" PointY="46.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysremotelogin" Width="1.5" PointX="2.75" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysserver" Width="1.5" PointX="8.75" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssystem_columns" Width="1.5" PointX="26.75" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssystem_components_surface_area_configuration" Width="1.5" PointX="32.75" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssystem_internals_allocation_units" Width="1.5" PointX="34.75" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssystem_internals_partition_columns" Width="1.5" PointX="44.75" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssystem_internals_partitions" Width="1.5" PointX="50.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssystem_objects" Width="1.5" PointX="4.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssystem_parameters" Width="1.5" PointX="50.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssystem_sql_modules" Width="1.5" PointX="10.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssystem_views" Width="1.5" PointX="50.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssystype" Width="1.5" PointX="12.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.syssysuser" Width="1.5" PointX="50.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.systable_types" Width="1.5" PointX="18.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.systable" Width="1.5" PointX="20.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.systcp_endpoints" Width="1.5" PointX="50.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.systrace_categories" Width="1.5" PointX="50.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.systrace_columns" Width="1.5" PointX="28.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.systrace_event_bindings" Width="1.5" PointX="50.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.systrace_events" Width="1.5" PointX="50.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.systrace_subclass_values" Width="1.5" PointX="36.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.systrace" Width="1.5" PointX="50.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.systransmission_queue" Width="1.5" PointX="38.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.systrigger_event_types" Width="1.5" PointX="50.75" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.systrigger_events" Width="1.5" PointX="50.75" PointY="46.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.systrigger" Width="1.5" PointX="50.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.systype_assembly_usages" Width="1.5" PointX="14.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.systype" Width="1.5" PointX="40.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysvia_endpoints" Width="1.5" PointX="52.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysview" Width="1.5" PointX="52.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysxml_indexes" Width="1.5" PointX="52.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysxml_schema_attributes" Width="1.5" PointX="52.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysxml_schema_collections" Width="1.5" PointX="52.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysxml_schema_component_placements" Width="1.5" PointX="52.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysxml_schema_components" Width="1.5" PointX="52.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysxml_schema_elements" Width="1.5" PointX="52.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysxml_schema_facets" Width="1.5" PointX="52.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysxml_schema_model_groups" Width="1.5" PointX="52.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysxml_schema_namespaces" Width="1.5" PointX="52.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysxml_schema_types" Width="1.5" PointX="52.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysxml_schema_wildcard_namespaces" Width="1.5" PointX="30.75" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.sysxml_schema_wildcards" Width="1.5" PointX="32.75" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.V_EmpInfo" Width="1.5" PointX="34.75" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.V_JJMFProcDisplay" Width="1.5" PointX="54.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.vwEstCompareReal" Width="1.5" PointX="2.75" PointY="54.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.vwJonnySampleData" Width="1.5" PointX="54.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.vwModelDataActivityCenter" Width="1.5" PointX="4.75" PointY="54.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.vwModelDataActivityCenter_2" Width="1.5" PointX="54.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.vwModelDataProject" Width="1.5" PointX="54.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.vwModelDataProject_2" Width="1.5" PointX="14.75" PointY="54.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.vwPeriodDataActualCapacity" Width="1.5" PointX="54.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.vwPeriodDataActualCapacity_2" Width="1.5" PointX="54.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.vwPeriodDataNormalCapacity" Width="1.5" PointX="54.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.vwPeriodDataNormalCapacity_2" Width="1.5" PointX="54.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.vwSampleCompareWorkData" Width="1.5" PointX="54.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.vwSampleDailyData" Width="1.5" PointX="54.75" PointY="46.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.vwSampleData" Width="1.5" PointX="54.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JJMFDBModel.vwSampleFroecastData" Width="1.5" PointX="16.75" PointY="55.75" IsExpanded="true" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabAnnualLeaveCondition_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabAnnualLeaveCondition_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabAttnEnv_InfoFabCode_AnnualLeaveCountType" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabAttnEnv_InfoFabCode_DefaultLeaveDeputyType" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabAttnEnv_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabAttnEnv_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabCatContent_InfoFabCategory_CatID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabCatContent_InfoFabContent_CID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabCatContent_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabCatContent_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabRoleAuth_InfoFabCatContent_CCID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabUserAuth_InfoFabCatContent_CCID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabCategory_InfoFabCategory_PID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabCategory_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabCategory_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabCode_InfoFabType_TypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabCode_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabCode_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabContent_InfoFabCode_ContentStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabContent_InfoFabCode_FileType" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabContent_InfoFabCode_PrgType" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpDeputy_InfoFabCode_DeputyType" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpLeave_InfoFabCode_LeaveDeputyType" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmployee_InfoFabCode_JobKindID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmployee_InfoFabCode_PayType" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmployee_InfoFabCode_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmployee_InfoFabCode_WageRank" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpOrg_InfoFabCode_OrgType" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpOvertime_InfoFabCode_OTPayType" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabLangMapping_InfoFabCode_LangID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabMessage_InfoFabCode_Format" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabOffDay_InfoFabCode_OffDayType" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabOrganization_InfoFabCode_OrgLevel" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabPayPeriod_InfoFabCode_PayType" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabPersonal_InfoFabCode_Education" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabProCert_InfoFabCode_DegreeTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabRole_InfoFabCode_RoleType" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabUser_InfoFabCode_LangID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabUser_InfoFabCode_UserType" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFEmpTaskDailyRecord_InfoFabCode_ApproveStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFEmpTaskDailyRecord_InfoFabCode_Frequency" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFEmpTaskDailyRecord_InfoFabCode_OTReason" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFEmpTaskDailyRecord_InfoFabCode_ReasonCode" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFTask_InfoFabCode_TaskStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabColumns_InfoFabTables_TableID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabColumns_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabColumns_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabColumnsSetting_InfoFabTables_TableID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabColumnsSetting_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabColumnsSetting_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabContent_InfoFabContent_FunctionSet" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabContent_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabContent_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabContent_InfoFabUser_Owner" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabTables_InfoFabContent_CID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpDeputy_InfoFabEmpOrg_DeputyEmpOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpDeputy_InfoFabEmpOrg_EmpOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpDeputy_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpDeputy_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmployee_InfoFabPersonal_PersonalID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmployee_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmployee_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpOrg_InfoFabEmployee_EmpID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpSkill_InfoFabEmployee_EmpID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFEmpProcedure_InfoFabEmployee_EmpID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFEmpTaskDailyDisplay_InfoFabEmployee_EmpID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFEmpTaskDailyRecord_InfoFabEmployee_EmpID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpLeave_InfoFabEmpOrg_DeputyEmpOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpLeave_InfoFabEmpOrg_EmpOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpLeaveDaysControl_InfoFabEmpOrg_EmpOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpOrg_InfoFabOrganization_OrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpOrg_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpOrg_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpOrg_InfoFabWorkGroup_WorkGroupID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpOvertime_InfoFabEmpOrg_EmpOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabOrganization_InfoFabEmpOrg_LeaderEmpOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFTask_InfoFabEmpOrg_Owner" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFTaskCalItem_InfoFabEmpOrg_EmpOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpProCert_InfoFabPersonal_PersonID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpProCert_InfoFabProCert_CertID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpProCert_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpProCert_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabENV_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabENV_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabENVItem_InfoFabENV_ENVID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabENVItem_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabENVItem_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabForgotPWD_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabForgotPWD_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabJobScheduler_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabJobScheduler_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabJobSchedulerExecutedHistory_InfoFabJobScheduler_JobId" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabLangMapping_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabLangMapping_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabMessage_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabMessage_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabMessageContent_InfoFabMessage_MID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabMessageContent_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabMessageContent_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabNotify_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabNotify_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabNotify_InfoFabUser_UID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabOrganization_InfoFabOrganization_PID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabOrganization_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabOrganization_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabOrgEnv_InfoFabOrganization_CostOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabOrgEnv_InfoFabOrganization_DeptOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabOrgEnv_InfoFabOrganization_PlanOrgID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabOrgEnv_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabOrgEnv_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabPersonal_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabPersonal_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabProCert_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabProCert_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabProCertSkill_InfoFabProCert_CertID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabRole_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabRole_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabRoleAuth_InfoFabRole_RoleID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabRoleUser_InfoFabRole_RID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabRoleAuth_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabRoleAuth_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabRoleUser_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabRoleUser_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabRoleUser_InfoFabUser_UID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabTables_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabTables_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabType_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabType_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpLeave_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpLeave_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpLeaveDay_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpLeaveDay_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpLeaveDaysControl_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpLeaveDaysControl_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpOvertime_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpOvertime_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpSkill_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpSkill_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabLeaveCode_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabLeaveCode_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabOffDay_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabOffDay_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabOvertimeCode_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabOvertimeCode_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabPayControl_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabPayControl_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabPayPeriod_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabPayPeriod_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabProCertSkill_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabProCertSkill_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabSkill_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabSkill_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabSkillType_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabSkillType_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabTaskEnv_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabTaskEnv_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabUser_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabUser_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabUserAuth_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabUserAuth_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabUserAuth_InfoFabUser_UserID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabWinScheduler_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabWinScheduler_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabWorkCode_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabWorkCode_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabWorkGroup_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabWorkGroup_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabWorkPattern_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabWorkPattern_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFEmpProcedure_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFEmpProcedure_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFEmpTaskDailyDisplay_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFEmpTaskDailyDisplay_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFEmpTaskDailyRecord_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFEmpTaskDailyRecord_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFProcedure_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFProcedure_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFTask_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFTask_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFTaskCal_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFTaskCal_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFTaskCalItem_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFTaskCalItem_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFTaskInternalProc_InfoFabUser_InitUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFTaskInternalProc_InfoFabUser_ModifiedUID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabWinSchExeHistory_InfoFabWinScheduler_JobId" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpLeave_InfoFabLeaveCode_LeaveCodeID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpLeave_InfoFabPayControl_PCID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpLeave_InfoFabWorkCode_WorkCodeID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpLeaveDay_InfoFabEmpLeave_LeaveID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpLeaveDay_InfoFabPayControl_PCID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpLeaveDay_InfoFabWorkCode_WorkCodeID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpLeaveDaysControl_InfoFabLeaveCode_LeaveCodeID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpOvertime_InfoFabOvertimeCode_OTCodeID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpOvertime_InfoFabPayControl_PCID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpOvertime_InfoFabWorkCode_WorkCodeID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabEmpSkill_InfoFabSkill_SkillID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabLeaveCode_InfoFabLeaveCode_DependOn" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabPayControl_InfoFabPayPeriod_PPID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabProCertSkill_InfoFabSkillType_SkillTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabSkill_InfoFabSkillType_SkillTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFTask_InfoFabSkillType_SkillTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabWorkPattern_InfoFabWorkCode_WCID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFEmpTaskDailyRecord_InfoFabWorkCode_WorkCodeID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_InfoFabWorkPattern_InfoFabWorkGroup_WGID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFEmpProcedure_JJMFProcedure_JJMFProcID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFEmpProcedure_JJMFTask_JJMFTaskID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFEmpTaskDailyDisplay_JJMFProcedure_JJMFProcID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFEmpTaskDailyDisplay_JJMFTask_JJMFTaskID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFEmpTaskDailyRecord_JJMFProcedure_JJMFProcID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFEmpTaskDailyRecord_JJMFTask_JJMFTaskID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFProcedure_JJMFProcedure_PID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFTaskCal_JJMFProcedure_JJMFProcID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFTaskInternalProc_JJMFProcedure_JJMFProcID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFTaskCal_JJMFTask_JJMFTaskID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFTaskInternalProc_JJMFTask_JJMFTaskID" ManuallyRouted="false" />
+        <AssociationConnector Association="JJMFDBModel.FK_JJMFTaskCalItem_JJMFTaskCal_JJMFTaskCalID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
